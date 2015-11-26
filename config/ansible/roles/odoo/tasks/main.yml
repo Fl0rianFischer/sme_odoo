@@ -1,0 +1,142 @@
+---
+- name: Install python and dependencies
+  apt: name={{item}} state=present
+  with_items:
+    - python
+    - python-pip
+    - python-dev
+    - libjpeg-dev
+    - libsasl2-dev
+    - libxslt-dev
+    - libxml2-dev
+    - libpq-dev
+    - wget
+    - ca-certificates
+    - curl
+    - sudo
+    - nano
+    - vim
+    - file
+    - xfonts-75dpi
+    - xfonts-base
+    - unzip
+    - build-essential
+    - fontconfig
+    - libfontconfig1
+    - libpng12-0
+    - libx11-6
+    - libxext6
+    - libxrender1
+    - libldap2-dev
+    - libssl-dev
+    - poppler-utils
+    - ttf-dejavu
+    - cabextract
+    - libfreetype6
+    - python-magic
+
+- name: Test if nodejs is installed (it's ok if it fails)
+  shell: dpkg-query -W 'nodejs'
+  ignore_errors: True
+  register: is_nodejs
+
+- name: Download Nodejs setup
+  get_url:
+    url="https://deb.nodesource.com/setup"
+    dest="/opt/nodejssetup.sh"
+  when: is_nodejs|failed
+
+- name: NodeJS preparation
+  command: /bin/bash /opt/nodejssetup.sh
+  when: is_nodejs|failed
+
+- name: Install NodeJS
+  apt: name=nodejs
+
+- name: Install less, clean css and casperjs
+  npm: name={{item}} global=yes
+  with_items:
+    - less
+    - less-plugin-clean-css
+    - casperjs
+
+- name: Check if wkhtmltox is installed
+  command: dpkg-query -W wkhtmltox
+  register: wkhtmltox_check_deb
+  failed_when: wkhtmltox_check_deb.rc > 1
+  changed_when: wkhtmltox_check_deb.rc == 1
+
+- name: Download wkhtmltox
+  get_url:
+    url="http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb"
+    dest="/opt/wkhtmltox.deb"
+  when: wkhtmltox_check_deb.rc == 1
+
+- name: Install wkhtmltox
+  apt: deb="/opt/wkhtmltox.deb"
+  sudo: true
+  when: wkhtmltox_check_deb.rc == 1
+
+- name: Create fonts directory
+  file: path=/usr/lib/python2.7/dist-packages/reportlab/fonts state=directory
+
+- stat: path=/usr/lib/python2.7/dist-packages/reportlab/fonts/_abi____.pfb
+  register: reportlab_fonts
+
+- name: Download pfbfer
+  get_url:
+     url="http://www.reportlab.com/ftp/fonts/pfbfer.zip"
+     dest="/opt/pfbfer.zip"
+  when: reportlab_fonts.stat.exists == False
+
+- name: Unpack pfbfer
+  unarchive: src=/opt/pfbfer.zip dest=/usr/lib/python2.7/dist-packages/reportlab/fonts copy=no
+  when: reportlab_fonts.stat.exists == False
+
+- name: Upload requirements file
+  copy: src="requirements.txt"
+        dest="/opt/requirements.txt"
+        mode=0644
+
+- name: Install python packages
+  pip: requirements=/opt/requirements.txt
+
+- stat: path=/usr/share/fonts/truetype/calibri.ttf
+  register: msfonts
+
+- name: Upload msfonts
+  copy: src="msfonts.sh"
+        dest="/opt/msfonts.sh"
+        mode=0644
+  when: msfonts.stat.exists == False
+
+- name: Execute msfonts
+  command: /bin/bash /opt/msfonts.sh
+  when: msfonts.stat.exists == False
+
+- stat: path=/usr/local/bin/phantomjs
+  register: phantomjs
+
+- name: Download phantomjs
+  get_url:
+     url="https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2"
+     dest="/tmp/phantomjs-1.9.8-linux-x86_64.tar.bz2"
+  when: phantomjs.stat.exists == False
+
+- name: Install tar and bzip2
+  apt: name={{item}} state=present
+  with_items:
+    - tar
+    - bzip2
+
+- name: Unpack phantomjs
+  unarchive: src=/tmp/phantomjs-1.9.8-linux-x86_64.tar.bz2 dest=/tmp copy=no
+  when: phantomjs.stat.exists == False
+
+- name: Copy phantomjs binary
+  command: cp -a /tmp/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
+  when: phantomjs.stat.exists == False
+
+- name: Set rights on phantomjs binary
+  file: path=/usr/local/bin/phantomjs mode=0755 owner=root group=root state=file
+  when: phantomjs.stat.exists == False

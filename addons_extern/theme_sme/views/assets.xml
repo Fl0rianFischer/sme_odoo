@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+  <data noupdate="1">
+
+  <!-- Main style -->
+  <template id="sme_main_less" inherit_id="website.assets_frontend">
+    <xpath expr="." position="inside">
+
+    </xpath>
+  </template>
+
+  <template id="sme_frontend_js" inherit_id="website.assets_frontend" priority="900">
+    <xpath expr="." position="inside">
+
+    </xpath>
+  </template>
+
+</data>
+</openerp>

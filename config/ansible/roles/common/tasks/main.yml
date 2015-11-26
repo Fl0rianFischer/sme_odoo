@@ -1,0 +1,26 @@
+---
+- name: Install package zsh
+  apt: name=zsh state=present
+
+- name: Copy Grml ZSH Config
+  copy: src=zshrc dest=/etc/zsh/zshrc
+
+- name: Set ZSH Shell for other users
+  user: name={{ item }} shell=/bin/zsh
+  with_items:
+    - vagrant
+    - root
+
+- stat: path={{ item.path }}/.zshrc
+  with_items:
+    - path: '/home/vagrant'
+      name: 'vagrant'
+    - path: '/root'
+      name: 'root'
+  register: p
+
+- name: create empty zshrc config
+  file: path={{ item.item.path }}/.zshrc state=touch owner={{ item.item.name }} group={{ item.item.name }} mode=0644
+  when: item.stat.exists is not defined or not item.stat.exists
+  with_items:
+    p.results

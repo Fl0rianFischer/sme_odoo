@@ -1,0 +1,15 @@
+---
+postgresql_version: 9.4
+postgresql_databases:
+  - name: vagrant
+postgresql_users:
+  - name: vagrant
+postgresql_user_privileges:
+  - name: vagrant
+    db: vagrant
+    priv: "ALL"
+    role_attr_flags: "SUPERUSER"
+postgresql_ext_install_contrib: yes
+postgresql_ext_install_dev_headers: yes
+postgresql_ext_install_postgis: yes
+postgresql_client_encoding: 'UTF-8'
