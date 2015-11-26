@@ -29,7 +29,8 @@
     'version': '1.0',
 
     'data': [
-        'views/assets.xml'
+        'views/assets.xml',
+        'views/header.xml'
     ],
 
     'depends': [
