@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+  <data>
+
+    <template id="supernova-snippets" inherit_id="website.snippets" name="Supernova Snippets">
+
+      <xpath expr="//div[@id='snippet_structure']//div[@class='o_panel_body']" position="inside">
+        <t t-snippet="s_media_block.s_media_block" t-thumbnail="/s_media_block/static/src/img/s_media_block-thumb.jpg"/>
+      </xpath>
+    </template>
+
+  </data>
+</openerp>

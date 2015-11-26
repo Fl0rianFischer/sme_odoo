@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+  <data>
+
+
+    <!-- Main style -->
+    <template id="s_mediablock_less" inherit_id="website.assets_frontend">
+      <xpath expr="//link[last()]" position="after">
+        <link href="/s_media_block/static/src/less/s_media_block.less" rel="stylesheet" type="text/less"/>
+      </xpath>
+    </template>
+
+    <template id="s_mediablock_frontend_js" inherit_id="website.assets_frontend" priority="900">
+      <xpath expr="//script[last()]" position="after">
+        <script src="/s_media_block/static/src/js/s_media_block_frontend.js"></script>
+      </xpath>
+    </template>
+    
+    <template id="s_mediablock_editor_js" inherit_id="website.assets_editor" priority="900" active="True">
+    <xpath expr="." position="inside">
+      
+      <script src="/s_media_block/static/src/js/s_media_block_editor.js"></script>
+    </xpath>
+  </template>
+
+  </data>
+</openerp>

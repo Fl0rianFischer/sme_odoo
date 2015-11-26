@@ -8,6 +8,7 @@
       <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css' />
       <link href="/theme_sme/static/less/layout.less" rel="stylesheet" type="text/less"/>
       <link href="/theme_sme/static/less/base.less" rel="stylesheet" type="text/less"/>
+      <link href="/theme_sme/static/less/home.less" rel="stylesheet" type="text/less"/>
     </xpath>
   </template>
 

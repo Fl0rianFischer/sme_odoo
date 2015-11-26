@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="website.homepage" name="Homepage" page="True" priority="29">
+      <t t-call="website.layout">
+        <div id="wrap" class="oe_structure">
+
+          <section  class="s_media_block video-header" 
+            header_type="video"  webm="/theme_sme/static/video/sme_image.webm" 
+            ogg="/theme_sme/static/video/sme_image.ogv" 
+            mp4="/theme_sme/static/video/sme_image.mp4" 
+            muted="muted" loop="loop" 
+            autoplay="autoplay" iframefit="fitCont" 
+            style="">    
+            <div class="video-header-overlay" />
+            <div class="container video-header-copy">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                  <h1>Modern Bike Art</h1>
+                  <h5 class="header-subtitle">„Bei keiner anderen Erfindung ist das Nützliche 
+                    mit dem Angenehmen so innig verbunden, wie beim Fahrrad.“ <br /> –Adam Opel
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="arrow-box">
+              <a class="scroll-link">
+                <i class="fa fa-angle-down fa-3x" />
+              </a>
+            </div>   
+          </section>
+
+          <section class="intro">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7 mt128 mb128">
+                  <h2>Passionate Engineering</h2>
+                  <p>Seit 2011 habe ich mich als Sportingenieur unter dem Label Sme Bicycles dem filigranen Fahrradbau verschworen. Mit der Affinität zum klassischen Design und modernem Purismus fertige ich seit jeher formschöne Einzelstücke. Durch den Verzicht auf überflüssige Elemente ohne Einschränkung gewohnter Funktionalität überträgt sich die raue Urbanität auf den Fahrer. Die Neigung zur Perfektion durch ein Höchstmaß an Qualität spiegelt sich in jedem Exemplar wider und verkörpert die Philosophie von Sme Bicycles -VeloLove.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </t>
+    </template>
+  </data>
+</openerp>

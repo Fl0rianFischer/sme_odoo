@@ -30,10 +30,12 @@
 
     'data': [
         'views/assets.xml',
-        'views/header.xml'
+        'views/header.xml',
+        'views/home.xml'
     ],
 
     'depends': [
-        'website'
+        'website',
+        's_media_block'
     ],
 }
