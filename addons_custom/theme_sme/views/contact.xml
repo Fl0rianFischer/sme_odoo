@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="website.contactus" name="Kontakt" page="True">
+      <t t-call="website.layout">
+        <div id="wrap" class="oe_structure">
+          <section class="cover" style="background-image: url('/theme_sme/static/img/header_bg.png')">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="mt128">
+                    <h1 class="cover-heading font-bright mb32">Say Hello!</h1>
+                    <h4 class="font-bright">Leidenschaftlicher Fahrradbau</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section contact-infos">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <h2>SME Bicycles</h2>
+                  <t t-call="website.company_description"/>
+                </div>
+                <div class="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 contact-details">
+                  <img class="img img-responsive" src="/theme_sme/static/img/logo_sme.png" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="container border border-dark border-light border-top">
+              <div name="mail_button" />
+            </div>
+          </section>
+        </div>
+      </t>
+    </template>
+
+    <template id="website.company_description" name="Supernova Company Description">
+      <div class="mb32 contact-address-details">
+        <div>
+          <p>Sebastian Meinecke, M.Sc.</p>
+          <span t-field="res_company.partner_id.street" />
+        </div>
+        <div>
+          <span t-field="res_company.partner_id.zip" />
+          <span t-field="res_company.partner_id.city" />
+        </div>
+        <div>
+          <span t-field="res_company.partner_id.country_id" />
+        </div>
+        <div class="row mt32">
+          <div class="col-sm-4">
+            <div>
+              <span>Tel:</span>
+            </div>
+            <div>
+              <span>Email:</span>
+            </div>
+            <div>
+              <span>Website:</span>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div>
+              <span t-field="res_company.partner_id.phone" />
+            </div>
+            <div>
+              <span t-field="res_company.partner_id.email" />
+            </div>
+            <div>
+              <span t-field="res_company.partner_id.website" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="sn_contactus_form" name="Contact Form" inherit_id="website_crm.contactus_form" customize_show="True">
+      <xpath expr="//form/.." position="replace">
+        <div class="row mt64 mb64">
+          <form action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/page/website_crm.contactus_thanks" class="s_website_form form-horizontal container-fluid mt32" enctype="multipart/form-data">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <div class="form-group form-field o_website_form_required_custom">
+              <label class="col-md-3 col-sm-4 control-label" for="contact_name">Your Name</label>
+              <div class="col-md-7 col-sm-8">
+                <input type="text" class="form-control o_website_form_input" name="contact_name" required=""/>
+              </div>
+            </div>
+            <div class="form-group form-field">
+              <label class="col-md-3 col-sm-4 control-label" for="phone">Phone Number</label>
+              <div class="col-md-7 col-sm-8">
+                <input type="text" class="form-control o_website_form_input"  name="phone"/>
+              </div>
+            </div>
+            <div class="form-group form-field o_website_form_required_custom">
+              <label class="col-md-3 col-sm-4 control-label" for="email_from">Email</label>
+              <div class="col-md-7 col-sm-8">
+                <input type="text" class="form-control o_website_form_input" name="email_from" required=""/>
+              </div>
+            </div>
+            <div class="form-group form-field o_website_form_required_custom">
+              <label class="col-md-3 col-sm-4 control-label" for="partner_name">Your Company</label>
+              <div class="col-md-7 col-sm-8">
+                <input type="text" class="form-control o_website_form_input" name="partner_name" required=""/>
+              </div>
+            </div>
+            <div class="form-group form-field o_website_form_required">
+              <label class="col-md-3 col-sm-4 control-label" for="name">Subject</label>
+              <div class="col-md-7 col-sm-8">
+                <input type="text" class="form-control o_website_form_input" name="name" required=""/>
+              </div>
+            </div>
+            <div class="form-group form-field o_website_form_required_custom">
+              <label class="col-md-3 col-sm-4 control-label" for="description">Your Question</label>
+              <div class="col-md-7 col-sm-8">
+                <textarea class="form-control o_website_form_input" name="description" required=""></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
+                <button class="btn btn-primary btn-lg o_website_form_send">Send</button>
+                <span id="o_website_form_result"></span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </xpath>
+    </template>
+
+
+  </data>
+</openerp>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <template id="sn_footer" inherit_id="website.footer_custom" name="Footer">
+      <xpath expr="//div[@id='footer']" position="replace">
+        <div class="oe_structure" id="footer">
+          <div class="footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 footer-social text-center">
+                  <a class="link-social" href="facebook.com" target="_blank">
+                    <i class="fa fa-facebook fa-2x" />
+                  </a>
+                  <a class="link-social" href="facebook.com" target="_blank">
+                    <i class="fa fa-instagram fa-2x" />
+                  </a>
+                  <a class="link-social" href="facebook.com" target="_blank">
+                    <i class="fa fa-pinterest-p fa-2x" />
+                  </a>
+                </div>
+                <div class="col-md-4 col-sm-4 footer-logo">
+                  <img class="img img-responsive" src="/theme_sme/static/img/logo_sme.png" />
+                </div>
+                <div class="col-md-4 col-sm-4 footer-links">
+                  <div class="item-center">
+                    <ul>
+                      <li>
+                        <a href="/">Kotakt</a>
+                      </li>
+                      <li>
+                        <a href="/">Datenschutz</a>
+                      </li>
+                      <li>
+                        <a href="/">Impressum</a>
+                      </li>
+                      <li>
+                        <t  t-if="user_id.partner_id.name != 'Public user'">
+                          <a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+                        </t>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <section class="footer-bottom text-center">
+            Site and Content © 2012-2015 by SME-Bicycles
+          </section>
+        </div>
+      </xpath>
+    </template>
+
+    <template id="website.layout_footer_copyright" inherit_id="website.layout" name="Footer Copyright">
+    </template>
+  </data>
+</openerp>

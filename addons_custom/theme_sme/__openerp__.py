@@ -31,11 +31,17 @@
     'data': [
         'views/assets.xml',
         'views/header.xml',
-        'views/home.xml'
+        'views/home.xml',
+        'views/snippets.xml',
+        'views/footer.xml',
+        'views/contact.xml'
     ],
 
     'depends': [
         'website',
-        's_media_block'
+        's_media_block',
+        'website_animate',
+        'website_crm',
+        'website_form'
     ],
 }

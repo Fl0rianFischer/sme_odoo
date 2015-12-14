@@ -16,9 +16,9 @@
             <div class="video-header-overlay" />
             <div class="container video-header-copy">
               <div class="row">
-                <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-                  <h1>Modern Bike Art</h1>
-                  <h5 class="header-subtitle">„Bei keiner anderen Erfindung ist das Nützliche 
+                <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 video-header-copy-box">
+                  <h1 class="font-bright">Modern Bike Art</h1>
+                  <h5 class="header-subtitle font-bright">„Bei keiner anderen Erfindung ist das Nützliche 
                     mit dem Angenehmen so innig verbunden, wie beim Fahrrad.“ <br /> –Adam Opel
                   </h5>
                 </div>
@@ -36,14 +36,144 @@
               <div class="row">
                 <div class="col-md-7 mt128 mb128">
                   <h2>Passionate Engineering</h2>
-                  <p>Seit 2011 habe ich mich als Sportingenieur unter dem Label Sme Bicycles dem filigranen Fahrradbau verschworen. Mit der Affinität zum klassischen Design und modernem Purismus fertige ich seit jeher formschöne Einzelstücke. Durch den Verzicht auf überflüssige Elemente ohne Einschränkung gewohnter Funktionalität überträgt sich die raue Urbanität auf den Fahrer. Die Neigung zur Perfektion durch ein Höchstmaß an Qualität spiegelt sich in jedem Exemplar wider und verkörpert die Philosophie von Sme Bicycles -VeloLove.</p>
+                  <p class="mt16">Seit 2011 habe ich mich als Sportingenieur unter dem Label Sme Bicycles dem filigranen Fahrradbau verschworen. Mit der Affinität zum klassischen Design und modernem Purismus fertige ich seit jeher formschöne Einzelstücke. Durch den Verzicht auf überflüssige Elemente ohne Einschränkung gewohnter Funktionalität überträgt sich die raue Urbanität auf den Fahrer. Die Neigung zur Perfektion durch ein Höchstmaß an Qualität spiegelt sich in jedem Exemplar wider und verkörpert die Philosophie von Sme Bicycles -VeloLove.</p>
                 </div>
               </div>
             </div>
           </section>
 
-        </div>
-      </t>
-    </template>
-  </data>
-</openerp>
+          <section class="bike-grid section section-lg">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 mb64">
+                  <h2 class="mb16">Selected Bikes</h2>
+                  <a href="/" class="link-cta">Alle Fahrräder ansehen</a>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="grid-sizer" />
+                <div class="gutter-sizer" />
+                <div class="col-md-4 grid-item grid-item-height1 bike1 o_animate o_anim_fade_in">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item grid-item-width1 bike2 o_animate o_anim_fade_in o_anim_del500">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item grid-item-height1 bike3 o_animate o_anim_fade_in o_anim_del500">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item bike4 o_animate o_anim_fade_in o_anim_del1000">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item bike5 o_animate o_anim_fade_in o_anim_del500">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item bike6 o_animate o_anim_fade_in o_anim_del500">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-lg" style="background-image: url('/theme_sme/static/img/bike-red.jpg');
+            background-size: cover;
+            background-position: center;">
+            <div class="caption-background-overlay overlay-full" />
+            <div class="container">
+              <div class="row">
+                <div class="caption-copy col-md-7 col-sm-7">
+                  <h2 class=" font-bright">Personalized Design</h2>
+                  <p class="font-bright">Der Bau ästhetischer Einzelstücke trägt zur verstärkten Identifizierung mit dem Produkt bei. Daher wird ein jedes Exemplar aus dem Hause Sme Bicycles namentlich personifiziert. Das zukünftige Velo soll demnach nicht nur als reines Fortbewegungsmittel betrachtet werden, sondern als eine Art Wegbegleiter für zahlreiche Abenteuer.</p>
+                  <br /> 
+                  <p class="font-bright">
+                    Wesentlich ist daher die enge Zusammenarbeit mit dem Auftraggeber sowie der Einsatz moderner Software, um den Ansprüchen an Design, Ergonomie und Qualität konstruktiv gerecht zu werden. Resultierend wird jedes Veloin Handarbeit und viel Liebe zum Detail in Deutschland hergestellt.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section-lg">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 text-center border border-dark">
+                    <div class="row">
+                      <div class="col-md-8 col-md-offset-2">
+                        <h2 class="mt32 mb16">Hallo Sagen</h2>
+                        <p class="mb32">Gerne nehme ich Ihre Anfrage für neue Aufträge, Reparaturen oder Modifikationen an</p>
+                        <a href="/page/contactus" class="btn btn-primary mb32">Hier entlang</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section section-lg">
+              <div class="container text-center">
+                <div class="row">
+                  <h2 class="mb64">Preise &amp; Auszeichnungen</h2>
+                  <div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-1">
+                    <img class="img img-responsive" src="/theme_sme/static/img/awards_ego.png" />
+                  </div>
+                  <div class="col-md-2 col-sm-2">
+                    <img class="img img-responsive" src="/theme_sme/static/img/awards_fuergruender.png" />
+                  </div>
+                  <div class="col-md-2 col-sm-2">
+                    <img class="img img-responsive" src="/theme_sme/static/img/awards_landeskampagne.png" />
+                  </div>
+                  <div class="col-md-2 col-sm-2">
+                    <img class="img img-responsive" src="/theme_sme/static/img/awards_pictures.png" />
+                  </div>
+                  <div class="col-md-2 col-sm-2">
+                    <img class="img img-responsive" src="/theme_sme/static/img/awards_sar.png" />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </t>
+      </template>
+    </data>
+  </openerp>

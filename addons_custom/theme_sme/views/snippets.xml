@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+  <data>
+
+    <template id="sme-snippets" inherit_id="website.snippets" name="SME Snippets">
+
+      <xpath expr="//div[@id='snippet_structure']//div[@class='o_panel_body']" position="inside">
+        <t t-snippet="theme_sme.product-gallery" t-thumbnail="/theme_supernova/static/src/img/thumbnails/thumbnail_slider.png"/>
+      </xpath>
+
+      <xpath expr="//div[@id='snippet_content']//div[@class='o_panel_body']" position="inside">
+      </xpath>
+      
+    </template>
+
+    <template id="sme_background_options" name="SME Background Options" inherit_id="website.snippet_options">
+      <xpath expr="//div[@data-js='background']" position="attributes">
+        <attribute name="data-selector">section, :not(section.sn-slider), :not(.o_gallery > .container) > .carousel, .parallax, .grid-item</attribute>
+      </xpath>
+    </template>
+
+    <template id="sn_background_options" name="Supernova Background Options" inherit_id="website.snippet_options">
+      <xpath expr="//div[@data-js='background']" position="after">
+
+        <!-- <div data-js='background'
+          data-selector="section, :not(section.sn-slider), :not(.o_gallery > .container) > .carousel, .parallax, .two-col-copy, .two-col-img, .details-item">
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Hintergrund</a>
+            <ul class="dropdown-menu">
+              <li data-select_class="background-white"><a>Weiß</a></li>
+              <li data-select_class="background-black"><a>Schwarz</a></li>
+              <li data-select_class="background-grey"><a>Grau</a></li>
+              <li data-select_class="background-none"><a>Kein</a></li>
+              <li data-choose_image="choose_image" data-background=""><a><b>Bild auswählen</b></a></li>
+            </ul>
+          </li>
+        </div> -->
+
+        <div data-selector="a">
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Link Stil</a>
+            <ul class="dropdown-menu">
+              <li data-select_class=""><a>Normal</a></li>
+              <li data-select_class="link-cta"><a>Animiert</a></li>
+            </ul>
+          </li>
+        </div>
+
+      </xpath>
+    </template>
+
+    <template id="product-gallery">
+      <section class="bike-grid section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mb64">
+              <h2 class="mb16">Selected Bikes</h2>
+              <a href="/" class="link-cta">Alle Fahrräder ansehen</a>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="grid-sizer" />
+            <div class="gutter-sizer" />
+            <div class="col-md-4 grid-item grid-item-height1 bike1 o_animate o_anim_fade_in">
+              <a class="grid-link" href="">
+                <div class="grid-item-copy-box">
+                  <div class="grid-item-copy">
+                    <span>Fridolin</span>
+                    <span>| Der Elegante</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 grid-item grid-item-width1 bike2 o_animate o_anim_fade_in o_anim_del500">
+              <a class="grid-link" href="">
+                <div class="grid-item-copy-box">
+                  <div class="grid-item-copy">
+                    <span>Fridolin</span>
+                    <span>| Der Elegante</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 grid-item grid-item-height1 bike3 o_animate o_anim_fade_in o_anim_del500">
+              <a class="grid-link" href="">
+                <div class="grid-item-copy-box">
+                  <div class="grid-item-copy">
+                    <span>Fridolin</span>
+                    <span>| Der Elegante</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 grid-item bike4 o_animate o_anim_fade_in o_anim_del1000">
+              <a class="grid-link" href="">
+                <div class="grid-item-copy-box">
+                  <div class="grid-item-copy">
+                    <span>Fridolin</span>
+                    <span>| Der Elegante</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 grid-item bike5 o_animate o_anim_fade_in o_anim_del500">
+              <a class="grid-link" href="">
+                <div class="grid-item-copy-box">
+                  <div class="grid-item-copy">
+                    <span>Fridolin</span>
+                    <span>| Der Elegante</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 grid-item bike6 o_animate o_anim_fade_in o_anim_del500">
+              <a class="grid-link" href="">
+                <div class="grid-item-copy-box">
+                  <div class="grid-item-copy">
+                    <span>Fridolin</span>
+                    <span>| Der Elegante</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="large-image-text" name="Image Text LG">
+
+      <section class="large-image-text section-lg">
+        <div class="caption-background-overlay overlay-gradient-none" />
+        <div class="container">
+          <div class="row">
+            <div class="caption-copy col-md-5 col-md-offset-1">
+              <h2 class=" font-bright">Kraftvolles Leichtgewicht</h2>
+              <p class="font-bright">Durch ihr kompaktes Design und die Verwendung von extrem Leichtem Aluminium ist das Gewicht der E3 Pro 2 so gering, dass Radsportler jeder Couleur auf das System setzen. In Kombination mit 6V Dynamos ist die E3 Pro 2 das ideale System.</p>
+              <div class="sn_product__unit">
+                <h6>
+                  <span class="font-bright sn_product__unit--number">
+                    110
+                  </span>
+                  <span class="font-bright sn_product__unit--unit">
+                    g
+                  </span>
+                </h6>
+                <p class="sn_product__unit--description">
+                  Gewicht
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </template>
+
+    <template id="caption-background-options" name="Caption Background Options" inherit_id="website.snippet_options">
+      <xpath expr="//div[@data-js='background']" position="after">
+
+        <div data-selector=".caption-background-overlay">
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Overlay</a>
+            <ul class="dropdown-menu">
+              <li data-select_class="overlay-full"><a>Full-Width</a></li>
+              <li data-select_class="overlay-gradient-left"><a>Gradient Links</a></li>
+              <li data-select_class="overlay-gradient-right"><a>Gradient Rechts</a></li>
+              <li data-select_class="overlay-gradient-top"><a>Gradient Top</a></li>
+              <li data-select_class="overlay-gradient-bottom"><a>Gradient Bottom</a></li>
+              <li data-select_class="overlay-gradient-none"><a>Kein</a></li>
+            </ul>
+          </li>
+        </div>
+
+      </xpath>
+    </template>
+
+  </data>
+</openerp>

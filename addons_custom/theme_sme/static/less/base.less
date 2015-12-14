@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  color: black;
-  font-size: 1.6rem;
+  color: @dark-grey;
+  font-size: 1.8rem;
   line-height: 2rem;
   background: white;
   .font-regular;
@@ -37,17 +37,167 @@ body {
 
 h1, h2, h3, h4 {
   .font-regular;
+  color: @black;
 }
 
 h1 {
   font-size: 5.6rem;
+  margin-top: 0;
 }
 
 h2 {
   font-size: 4rem;
 }
 
+h3 {
+  font-size: 3.4rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
 p {
   font-size: 1.8rem;
   line-height: 2.8rem;
+  color: @dark-grey;
+}
+
+.section {
+  padding: 64px 0;
+  position: relative;
+}
+
+.section-lg {
+  padding: 128px 0;
+  position: relative;
+}
+
+.section.section-lg {
+  padding-top: 64px;
+}
+
+.font-bright {
+  color: @bright;
+}
+
+.font-bright:hover {
+  color: @bright;
+}
+
+.border {
+  border: 2px solid;
+}
+
+.border-bright {
+  border-color: @bright;
+}
+
+.border-dark {
+  border-color: @dark-grey;
+}
+
+.border-light {
+  border: 1px solid;
+}
+
+.border-top {
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+@light-grey: #f1f1f1;
+@dark-grey: #545454;
+@bright: white;
+@black: black;
+@dark-blue: #0B2B46;
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+a.link-cta  {
+  font-size: inherit;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-bottom: 2px;
+  border-bottom: none;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: none;
+    padding-bottom: 2px;
+  }
+
+  &:after {
+    content: "\f105";
+    padding-left: 0.5rem;
+    font-family: FontAwesome;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 96%;
+    height: 1px;
+    bottom: 0;
+    left: 2%;
+    background-color: @dark-grey;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+a.link-cta.font-bright {
+  &:before {
+    background-color: @bright;
+  }
+}
+
+#wrapwrap {
+  .btn {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 0.01rem;
+    border: 2px solid;
+    border-radius: 0;
+    padding: 10px 20px;
+  }
+
+  .btn-primary {
+    background-color: @dark-grey;
+    border-color: @dark-grey;
+    transition: all 100ms ease-out;
+
+    &:hover {
+      background-color: white;
+      border-color: @dark-grey;
+      color: @dark-grey;
+    }
+  }
+}
+
+.item-center {
+  margin: 0 auto;
 }

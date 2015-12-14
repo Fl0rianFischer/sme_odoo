@@ -1,0 +1,169 @@
+.grid {
+  width: 100%;
+}
+
+.bike-grid {
+  background-color: @light-grey;
+  text-align: center;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.grid-item.grid-item-width1 {
+  width: 66.25%;
+}
+
+.grid-item.grid-item-height1 {
+  height: 610px;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 32.75%;
+}
+
+.gutter-sizer {
+  width: 0;
+}
+
+.grid-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.grid-item-copy-box {
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transition: background 300ms linear;
+  -moz-transition: background 300ms linear;
+  transition: background 300ms linear;
+}
+
+.is-hovered.grid-item-copy-box {
+  background: rgba(255, 255, 255, 1);
+}
+
+.grid-item-copy {
+  .font-regular;
+  display: inline-block;
+  color: black;
+  padding: 10px;
+}
+
+.bike1 {
+  background-image: url('../img/bodo2.jpg');
+}
+
+.bike2 {
+  background-image: url('../img/albert2.jpg');
+}
+
+.bike3 {
+  background-image: url('../img/charlie2.jpg');
+}
+
+.bike4 {
+  background-image: url('../img/wolfgang1.jpg');
+}
+
+.bike5 {
+  background-image: url('../img/fridolin4.jpg');
+}
+
+.bike6 {
+  background-image: url('../img/thaddaeus8.jpg');
+}
+
+
+.caption-background {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 400px;
+  padding: 125px 0;
+}
+
+.caption-copy {
+  h1, 
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 25px;
+  }
+}
+
+// CAPTION COPY OPTIONS
+// ====================
+
+.caption-background-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  z-index: 0;
+}
+
+// OVERLAY OPTIONS
+// ===============
+
+.overlay-full {
+  background: black;
+  opacity: 0.4;
+}
+
+.overlay-gradient-left {
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -o-linear-gradient(left, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -ms-linear-gradient(left, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: linear-gradient(left, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+}
+
+.overlay-gradient-right {
+  background: -webkit-linear-gradient(right, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -moz-linear-gradient(right, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -o-linear-gradient(right, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -ms-linear-gradient(right, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: linear-gradient(right, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+}
+
+.overlay-gradient-top {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: linear-gradient(top, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+}
+
+.overlay-gradient-bottom {
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -o-linear-gradient(bottom, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: -ms-linear-gradient(bottom, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+  background: linear-gradient(bottom, rgba(0,0,0,0.80) 0%, rgba(241,111,92,0) 100%);
+}
+
+.overlay-gradient-none {
+  background: transparent;
+}
