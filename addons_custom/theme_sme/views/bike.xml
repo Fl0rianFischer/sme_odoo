@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+  <data noupdate="1">
+
+    <template id="website.wolfgang" name="Wolfgang" page="True">
+      <t t-call="website.layout">
+        <div id="wrap" class="oe_structure">
+
+          <div id="myCarousel" class="carousel slide s_banner oe_custom_bg" data-interval="10000" style="height: 60vh;">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0"  class="active"/>
+              <li data-target="#myCarousel" data-slide-to="1"/>
+              <li data-target="#myCarousel" data-slide-to="2"/>
+              <li data-target="#myCarousel" data-slide-to="3"/>
+              <li data-target="#myCarousel" data-slide-to="4"/>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item oe_img_bg oe_custom_bg active" style="background-image: url(/theme_sme/static/img/wolfgang2.jpg); background-size: cover; background-position: center; ; ; ; ">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div class="mt128">
+                        <h1 class="cover-heading font-bright mb32">Wolfgang</h1>
+                        <h4 class="font-bright">Der Wolf im Schafspelz</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item oe_img_bg oe_custom_bg" style="background-image: url(/theme_sme/static/img/wolfgang1_start.jpg); background-size: cover; background-position: center">
+
+              </div>
+              <div class="item oe_img_bg oe_custom_bg" style="background-image: url(/theme_sme/static/img/wolfgang3.jpg); background-size: cover; background-position: center">
+
+              </div>
+              <div class="item oe_img_bg oe_custom_bg" style="background-image: url(/theme_sme/static/img/wolfgang4.jpg); background-size: cover; background-position: center">
+
+              </div>
+              <div class="item oe_img_bg oe_custom_bg" style="background-image: url('/theme_sme/static/img/wolfgang5.jpg')">
+
+              </div>
+            </div>
+            <div class="carousel-control left" data-target="#myCarousel" data-slide="prev" style="width: 10%">
+              <i class="fa fa-chevron-left"/>
+            </div>
+            <div class="carousel-control right" data-target="#myCarousel" data-slide="next" style="width: 10%">
+              <i class="fa fa-chevron-right"/>
+            </div>
+          </div>
+          <section class="section-lg">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                  <h2 class="mb32">Italienischer Renner</h2>
+                  <p>"Wolfgang" ist wortwörtlich der Wolf im Schafspelz. Kern dieses Aufbaus ist ein Aero Rahmen aus 6061 T6 Flugzeugaluminium. Erweitert wird der hydrogeformte Profilrohrsatz durch eine reine 2/10-Fach Veloce-Schaltgruppe des italienischen Herstellers Campagnolo. Ausreichend Laufruhe wird durch hochglanz-polierte 6061 T6 H+Son Archertype Felgen in Kombination mit italienischen Miche Racing Box Naben gewährleistet. Die Echtleder Komponenten aus dem Hause Gyes runden den zeitlosen, dennoch klassischen Look ab. Dieses unikate Exemplar ist eine Rennmaschine wie sie im Buche geschrieben steht.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="">
+            <div class="container border border-dark border-light border-top mb64">
+              <div class="row  mt128">
+                <div class="col-md-9 col-md-offset-1">
+                  <h2 class="mb32">Technische Details</h2>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Rahmen</span>
+                    </div>
+                    <div class="col-md-10">
+                      <span>Rennrad Geometrie (RH 56)  | vertikale Ausfallende |  Aeroshape AL 6061T6 | 3-Fach konifiziert</span>
+                    </div>
+                  </div>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Gabel</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Kinesis</span>
+                    </div>
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Steuersatz</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>VP Semi Integrated</span>
+                    </div>
+                  </div>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Kurbelsatz</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Campagnolo Veloce</span>
+                    </div>
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Innenlager</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Campagnolo Veloce Ultratorque</span>
+                    </div>
+                  </div>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Antrieb</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Campagnolo Veloce | 50/42Z</span>
+                    </div>
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Schaltung</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Campagnolo Veloce 2/10-Fach</span>
+                    </div>
+                  </div>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Lenker/Vorbau</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Kalloy Ergo 6061T6</span>
+                    </div>
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Lenkergriffe</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Gyes Echtleder</span>
+                    </div>
+                  </div>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Sattel/Stütze</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Gyes G5 Ultra | Kalloy Aero</span>
+                    </div>
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Pedale</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>VP R70</span>
+                    </div>
+                  </div>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Laufräder</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>H+Son Archertype  VR radial | HR 3-fach gekreuzt </span>
+                    </div>
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Nabensatz</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Miche Racing Box  VR 32L | HR 32L</span>
+                    </div>
+                  </div>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Bereifung</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Continental 4 Seasons 28-622 </span>
+                    </div>
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Bremsen</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Campagnolo Veloce</span>
+                    </div>
+                  </div>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Highlights</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Hinterradaussparung</span>
+                    </div>
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Gewicht</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>7,6 kg</span>
+                    </div>
+                  </div>
+                  <div class="row mb8">
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Status</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Verkauft</span>
+                    </div>
+                    <div class="col-md-2 tech-label">
+                      <span class="font-bold">Kategorie</span>
+                    </div>
+                    <div class="col-md-4">
+                      <span>Neuafbau</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </t>
+    </template>
+
+  </data>
+</openerp>

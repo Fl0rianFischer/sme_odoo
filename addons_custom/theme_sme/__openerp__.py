@@ -34,7 +34,10 @@
         'views/home.xml',
         'views/snippets.xml',
         'views/footer.xml',
-        'views/contact.xml'
+        'views/contact.xml',
+        'views/bike.xml',
+        'data/data.xml',
+        'views/velosophie.xml'
     ],
 
     'depends': [

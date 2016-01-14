@@ -54,7 +54,7 @@
           <span t-field="res_company.partner_id.country_id" />
         </div>
         <div class="row mt32">
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <div>
               <span>Tel:</span>
             </div>

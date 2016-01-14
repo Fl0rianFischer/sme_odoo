@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="website.velosophie" name="Velosophie" page="True">
+      <t t-call="website.layout">
+        <div id="wrap" class="oe_structure">
+          <section class="cover" style="background-image: url('/theme_sme/static/img/header_bg_big.jpg'); background-size: cover; background-position: cover; height: 50vh;">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="mt128">
+                    <h1 class="cover-heading  mb32">Passionate Engineering</h1>
+                    <h4 class="">Modernes Industriedesign trifft klassischen Fahrradbau</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-lg">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-12">
+                  <p>Der Bau ästhetischer Einzelstücke trägt zur verstärkten Identifizierung mit dem Produkt bei. Daher wird ein jedes Exemplar aus dem Hause Sme Bicycles namentlich personifiziert. Das zukünftige Velo soll demnach nicht nur als reines Fortbewegungsmittel betrachtet werden, sondern als eine Art Wegbegleiter für zahlreiche Abenteuer.</p>
+                  <br /> 
+                  <p>
+                    Wesentlich ist daher die enge Zusammenarbeit mit dem Auftraggeber sowie der Einsatz moderner Software, um den Ansprüchen an Design, Ergonomie und Qualität konstruktiv gerecht zu werden. Resultierend wird jedes Veloin Handarbeit und viel Liebe zum Detail in Deutschland hergestellt.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section-lg" style="height: 600px; background-image: url('/theme_sme/static/img/main_bg.png'); background-size: cover; background-position: center;">
+              <div class="container">
+                <div class="row mt128">
+                  <div class="col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3 text-center">
+                    <h2 class="font-bright mb16">Velolove</h2>
+                    <h4 class="font-bright">Sebastian Meinecke, Jahrgang 1988, leidenschaftlicher Produktentwickler und Fahrradbauer</h4>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </t>
+      </template>
+
+    </data>
+  </openerp>
