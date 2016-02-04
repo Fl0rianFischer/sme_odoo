@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+  <data>
+
+    <template id="website-contact-snippets" inherit_id="website.snippets" name="Contact Snippet">
+      <xpath expr="//div[@id='snippet_structure']//div[@class='o_panel_body']" position="inside">
+        <t t-snippet="website_contact_snippet.contactus_form" t-thumbnail="/s_media_block/static/src/img/s_media_block-thumb.jpg"/>
+      </xpath>
+    </template>
+
+    <template id="website-contact-snippet-options" inherit_id="website.snippet_options">
+      <xpath expr="//div[@data-js='blog-style']" position="before">
+        <div data-js="website_contact_snippet" data-selector="section.website-form-snippet">
+          <li data-form_opt=""><a><i class="fa fa-fw fa-cog"></i>Form Fields</a></li>
+        </div>
+      </xpath>
+    </template>
+
+  </data>
+</openerp>

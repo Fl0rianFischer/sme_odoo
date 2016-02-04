@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+  <t t-name="website_contact_snippet.contactus_form_modal">
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"></button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body row">
+            <div class="col-sm-6">
+              <div class="checkbox">
+                <label class="col-sm-7 pre_label">Name</label>
+                <label class="col-sm-5">
+                  <input id="name" type="checkbox"/>           
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="checkbox">
+                <label class="col-sm-7 pre_label">Email</label>
+                <label class="col-sm-5">
+                  <input id="email" type="checkbox"/>           
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="checkbox">
+                <label class="col-sm-7 pre_label">Phone</label>
+                <label class="col-sm-5">
+                  <input id="phone" type="checkbox"/>           
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="checkbox">
+                <label class="col-sm-7 pre_label">Company</label>
+                <label class="col-sm-5">
+                  <input id="company" type="checkbox"/>           
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="checkbox">
+                <label class="col-sm-7 pre_label">Message</label>
+                <label class="col-sm-5">
+                  <input id="message" type="checkbox"/>           
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="cancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button id="sub-data" type="button" class="btn btn-primary" data-dismiss="modal">Apply</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </t>
+
+  <t t-name="website_contact_snippet.form_name">
+    <div class="form-group form-name form-field o_website_form_required_custom col-md-12">
+      <label class="col-md-3 col-sm-4 control-label" for="contact_name">Your Name</label>
+      <div class="col-md-7 col-sm-8">
+        <input type="text" class="form-control o_website_form_input" name="contact_name" required=""/>
+      </div>
+    </div>
+  </t>
+
+  <t t-name="website_contact_snippet.form_email">
+    <div class="form-group form-email form-field o_website_form_required_custom col-md-12">
+      <label class="col-md-3 col-sm-4 control-label" for="email_from">Email</label>
+      <div class="col-md-7 col-sm-8">
+        <input type="text" class="form-control o_website_form_input" name="email_from" required=""/>
+      </div>
+    </div>
+  </t>
+
+  <t t-name="website_contact_snippet.form_phone">
+    <div class="form-group form-field form-phone col-md-12">
+      <label class="col-md-3 col-sm-4 control-label" for="phone">Phone Number</label>
+      <div class="col-md-7 col-sm-8">
+        <input type="text" class="form-control o_website_form_input" placeholder="e.g. (+32).81.81.37.00" name="phone"/>
+      </div>
+    </div>
+  </t>
+
+  <t t-name="website_contact_snippet.form_company">
+    <div class="form-group form-company form-field o_website_form_required_custom col-md-12">
+      <label class="col-md-3 col-sm-4 control-label" for="partner_name">Your Company</label>
+      <div class="col-md-7 col-sm-8">
+        <input type="text" class="form-control o_website_form_input" name="partner_name" required=""/>
+      </div>
+    </div>
+  </t>
+
+  <t t-name="website_contact_snippet.form_message">
+    <div class="form-group form-message form-field o_website_form_required_custom col-md-12">
+      <label class="col-md-3 col-sm-4 control-label" for="description">Your Question</label>
+      <div class="col-md-7 col-sm-8">
+        <textarea class="form-control o_website_form_input" name="description" required=""></textarea>
+      </div>
+    </div>
+  </t>
+
+
+</templates>
