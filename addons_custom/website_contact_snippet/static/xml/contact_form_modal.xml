@@ -46,6 +46,14 @@
             </div>
             <div class="col-sm-6">
               <div class="checkbox">
+                <label class="col-sm-7 pre_label">Subject</label>
+                <label class="col-sm-5">
+                  <input id="subject" type="checkbox"/>           
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="checkbox">
                 <label class="col-sm-7 pre_label">Message</label>
                 <label class="col-sm-5">
                   <input id="message" type="checkbox"/>           
@@ -65,45 +73,55 @@
 
   <t t-name="website_contact_snippet.form_name">
     <div class="form-group form-name form-field o_website_form_required_custom col-md-12">
-      <label class="col-md-3 col-sm-4 control-label" for="contact_name">Your Name</label>
-      <div class="col-md-7 col-sm-8">
-        <input type="text" class="form-control o_website_form_input" name="contact_name" required=""/>
+      <div class="row">
+        <label class="col-md-3 col-sm-4 control-label" for="contact_name">Your Name</label>
+        <div class="col-md-7 col-sm-8">
+          <input type="text" class="form-control o_website_form_input" name="contact_name" required=""/>
+        </div>
       </div>
     </div>
   </t>
 
   <t t-name="website_contact_snippet.form_email">
     <div class="form-group form-email form-field o_website_form_required_custom col-md-12">
-      <label class="col-md-3 col-sm-4 control-label" for="email_from">Email</label>
-      <div class="col-md-7 col-sm-8">
-        <input type="text" class="form-control o_website_form_input" name="email_from" required=""/>
+      <div class="row">
+        <label class="col-md-3 col-sm-4 control-label" for="email_from">Email</label>
+        <div class="col-md-7 col-sm-8">
+          <input type="text" class="form-control o_website_form_input" name="email_from" required=""/>
+        </div>
       </div>
     </div>
   </t>
 
   <t t-name="website_contact_snippet.form_phone">
     <div class="form-group form-field form-phone col-md-12">
-      <label class="col-md-3 col-sm-4 control-label" for="phone">Phone Number</label>
-      <div class="col-md-7 col-sm-8">
-        <input type="text" class="form-control o_website_form_input" placeholder="e.g. (+32).81.81.37.00" name="phone"/>
+      <div class="row">
+        <label class="col-md-3 col-sm-4 control-label" for="phone">Phone Number</label>
+        <div class="col-md-7 col-sm-8">
+          <input type="text" class="form-control o_website_form_input" placeholder="e.g. (+32).81.81.37.00" name="phone"/>
+        </div>
       </div>
     </div>
   </t>
 
   <t t-name="website_contact_snippet.form_company">
     <div class="form-group form-company form-field o_website_form_required_custom col-md-12">
-      <label class="col-md-3 col-sm-4 control-label" for="partner_name">Your Company</label>
-      <div class="col-md-7 col-sm-8">
-        <input type="text" class="form-control o_website_form_input" name="partner_name" required=""/>
+      <div class="row">
+        <label class="col-md-3 col-sm-4 control-label" for="partner_name">Your Company</label>
+        <div class="col-md-7 col-sm-8">
+          <input type="text" class="form-control o_website_form_input" name="partner_name" required=""/>
+        </div>
       </div>
     </div>
   </t>
 
   <t t-name="website_contact_snippet.form_message">
     <div class="form-group form-message form-field o_website_form_required_custom col-md-12">
-      <label class="col-md-3 col-sm-4 control-label" for="description">Your Question</label>
-      <div class="col-md-7 col-sm-8">
-        <textarea class="form-control o_website_form_input" name="description" required=""></textarea>
+      <div class="row">
+        <label class="col-md-3 col-sm-4 control-label" for="description">Your Question</label>
+        <div class="col-md-7 col-sm-8">
+          <textarea class="form-control o_website_form_input" name="description" required=""></textarea>
+        </div>
       </div>
     </div>
   </t>

@@ -19,7 +19,7 @@ odoo.define('website_contact_snippet.editor', function(require) {
 
             var $subData = self.$modal.find($('#sub-data')),
                 $sendForm = self.$target.find($('.o_website_form_send').closest('.form-group')),
-                formItems = ['name','email','phone','company','message'],
+                formItems = ['name','email','phone','company','subject','message'],
                 modalIds = formItems.map(function(formItem) {
                   return formItem = self.$modal.find($('#' + formItem));
                 });
@@ -39,16 +39,21 @@ odoo.define('website_contact_snippet.editor', function(require) {
             });
 
             function modal_to_form(formItem) {
-                var template = $(qweb.render("website_contact_snippet.form_" + formItem)),
-                    $formEl = self.$target.find($('.form-' + formItem)),
+                var $formEl = self.$target.find($('.form-' + formItem)),
                     $modalCheck = self.$modal.find($('#' + formItem));
 
                 if ($modalCheck.attr('checked') === 'checked' && $formEl.length < 1) {
+
+                    var template = $(qweb.render("website_contact_snippet.form_" + formItem));
                     template.insertBefore($sendForm);
+
                 } else if ($modalCheck.attr('checked') === 'checked' && $formEl.length > 0) {
-                    // Do nothing
+
+                    (formItem === 'subject') ? $formEl.removeClass('hidden').val('') : '';
+
                 } else if ($modalCheck.attr('checked') !== 'checked')  {
-                    $formEl.remove();
+
+                    (formItem !== 'subject') ? $formEl.remove() : $formEl.addClass('hidden').val('Message from contact snippet');
                 }
             }
 
@@ -56,7 +61,9 @@ odoo.define('website_contact_snippet.editor', function(require) {
                 var $formEl = self.$target.find($('.form-' + formItem)),
                     $modalCheck = self.$modal.find($('#' + formItem));
 
-                (self.$target.find($('.form-' + formItem)).length > 0) ? $modalCheck.attr('checked', true) : $modalCheck.attr('checked', false);
+                ($formEl.length > 0 && formItem !== 'subject' || formItem === 'subject' && !$formEl.hasClass('hidden'))
+                    ? $modalCheck.attr('checked', true)
+                    : $modalCheck.attr('checked', false);
             }
 
             this.$modal.on('hidden.bs.modal', function () {
