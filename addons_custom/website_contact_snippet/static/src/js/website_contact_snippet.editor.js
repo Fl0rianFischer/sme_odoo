@@ -29,13 +29,19 @@ odoo.define('website_contact_snippet.editor', function(require) {
             });
 
             self.addEventHandler(modalIds, 'click', function() {
-                ($(this).attr('checked')) ? $(this).attr('checked', false) : $(this).attr('checked', true);
+                ($(this).attr('checked')) 
+                    ? $(this).attr('checked', false) 
+                    : $(this).attr('checked', true);
             });
 
             $subData.on('click', function() {
                 formItems.forEach(function(formItem) {
                     modal_to_form(formItem);
                 });
+            });
+
+            this.$modal.on('hidden.bs.modal', function () {
+                $(this).remove();
             });
 
             function modal_to_form(formItem) {
@@ -70,10 +76,6 @@ odoo.define('website_contact_snippet.editor', function(require) {
                     ? $modalCheck.attr('checked', true)
                     : $modalCheck.attr('checked', false);
             }
-
-            this.$modal.on('hidden.bs.modal', function () {
-                $(this).remove();
-            });
         },
 
         addEventHandler: function (array, type, func) {
