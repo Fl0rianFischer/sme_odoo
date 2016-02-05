@@ -7,7 +7,7 @@ odoo.define('website_contact_snippet.editor', function(require) {
     var core = require('web.core');
     var qweb = core.qweb;
 
-    ajax.loadXML('/website_contact_snippet/static/xml/contact_form_modal.xml', qweb);
+    ajax.loadXML('/website_contact_snippet/static/src/xml/contact_form_modal.xml', qweb);
 
     options.registry.website_contact_snippet = options.Class.extend({
         form_opt: function(type, value, $li) {
@@ -40,20 +40,25 @@ odoo.define('website_contact_snippet.editor', function(require) {
 
             function modal_to_form(formItem) {
                 var $formEl = self.$target.find($('.form-' + formItem)),
-                    $modalCheck = self.$modal.find($('#' + formItem));
+                    $modalCheck = self.$modal.find($('#' + formItem)),
+                    isChecked = $modalCheck.attr('checked') === 'checked';
 
-                if ($modalCheck.attr('checked') === 'checked' && $formEl.length < 1) {
+                if (isChecked && $formEl.length < 1) {
 
                     var template = $(qweb.render("website_contact_snippet.form_" + formItem));
                     template.insertBefore($sendForm);
 
-                } else if ($modalCheck.attr('checked') === 'checked' && $formEl.length > 0) {
+                } else if (isChecked && $formEl.length > 0) {
 
-                    (formItem === 'subject') ? $formEl.removeClass('hidden').val('') : '';
+                    (formItem === 'subject') 
+                        ? $formEl.removeClass('hidden').find('input').attr('value', '')
+                        : '';
 
                 } else if ($modalCheck.attr('checked') !== 'checked')  {
 
-                    (formItem !== 'subject') ? $formEl.remove() : $formEl.addClass('hidden').val('Message from contact snippet');
+                    (formItem !== 'subject') 
+                        ? $formEl.remove() 
+                        : $formEl.addClass('hidden').find('input').attr('value', 'Message from contact snippet');
                 }
             }
 

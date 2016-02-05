@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <openerp>
   <data>
-
-
-    <!-- Main style -->
-    <template id="s_contact_form_less" inherit_id="website.assets_frontend">
-      <xpath expr="//link[last()]" position="after">
-        <link href="/website_contact_snippet/static/less/website_contact_snippet.less" rel="stylesheet" type="text/less"/>
-      </xpath>
-    </template>
-
-    <!-- <template id="s_contact_form_frontend_js" inherit_id="website.assets_frontend" priority="900">
-      <xpath expr="//script[last()]" position="after">
-        <script src="/website_contact_snippet/static/src/js/website_contact_snippet_frontend.js"></script>
-      </xpath>
-    </template> -->
     
     <template id="s_contact_form_editor_js" inherit_id="website.assets_editor" priority="900" active="True">
       <xpath expr="." position="inside">
-        <script src="/website_contact_snippet/static/js/website_contact_snippet.editor.js"></script>
+        <script src="/website_contact_snippet/static/src/js/website_contact_snippet.editor.js"></script>
       </xpath>
     </template> 
 

@@ -4,7 +4,7 @@
 
     <template id="website-contact-snippets" inherit_id="website.snippets" name="Contact Snippet">
       <xpath expr="//div[@id='snippet_structure']//div[@class='o_panel_body']" position="inside">
-        <t t-snippet="website_contact_snippet.contactus_form" t-thumbnail="/s_media_block/static/src/img/s_media_block-thumb.jpg"/>
+        <t t-snippet="website_contact_snippet.contactus_form" t-thumbnail="/website_contact_snippet/static/src/img/thumbnail.png"/>
       </xpath>
     </template>
 

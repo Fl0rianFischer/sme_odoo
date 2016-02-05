@@ -31,7 +31,7 @@
     'data': [
         'views/assets.xml',
         'views/snippet.xml',
-        'static/xml/contact_form.xml'
+        'static/src/xml/contact_form.xml'
     ],
 
     'depends': [
