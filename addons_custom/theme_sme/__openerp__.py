@@ -45,6 +45,7 @@
         'website',
         'website_crm',
         'website_form',
-        's_media_block'
+        's_media_block',
+        'website_files'
     ],
 }
