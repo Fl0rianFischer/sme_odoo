@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+
 html {
   font-size: 62.5%;
 }
@@ -14,9 +16,11 @@ body {
   line-height: 2.8rem;
 }
 
-.font(@font-family: Quicksand, "Trebuchet MS", Helvetica, sans-serif; 
+.font (
+  @font-family: Quicksand, "Trebuchet MS", Helvetica, sans-serif; 
   @font-weight: normal; 
-  @font-style: normal) {
+  @font-style: normal
+  ) {
 
   font-family: @font-family;
   font-style: @font-style;
@@ -24,15 +28,15 @@ body {
 }
 
 .font-regular {
-  .font(Quicksand, sans-serif; 400; normal);
+  .font(Quicksand, "Trebuchet MS", Helvetica, sans-serif; 400; normal);
 }
 
 .font-light {
-  .font(Quicksand, sans-serif; 300; normal);
+  .font(Quicksand, "Trebuchet MS", Helvetica, sans-serif; 300; normal);
 }
 
 .font-bold {
-  .font(Quicksand, sans-serif; 700; normal);
+  .font(Quicksand, "Trebuchet MS", Helvetica, sans-serif; 700; normal);
 }
 
 h1, h2, h3, h4 {
@@ -61,6 +65,10 @@ p {
   font-size: 1.8rem;
   line-height: 2.8rem;
   color: @dark-grey;
+}
+
+ul {
+  padding-left: 0;
 }
 
 .section {

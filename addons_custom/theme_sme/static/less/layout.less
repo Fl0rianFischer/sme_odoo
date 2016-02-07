@@ -21,6 +21,10 @@ header {
     -webkit-transition: all @logo-animation-speed cubic-bezier(0.17, 0.04, 0.03, 0.94);
     -moz-transition: all @logo-animation-speed cubic-bezier(0.17, 0.04, 0.03, 0.94);
     transition: all @logo-animation-speed cubic-bezier(0.17, 0.04, 0.03, 0.94);
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .header-logo-script {
@@ -31,6 +35,16 @@ header {
     -webkit-transition: all @logo-animation-speed cubic-bezier(0.17, 0.04, 0.03, 0.94);
     -moz-transition: all @logo-animation-speed cubic-bezier(0.17, 0.04, 0.03, 0.94);
     transition: all @logo-animation-speed cubic-bezier(0.17, 0.04, 0.03, 0.94);
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      opacity: 1;
+      width: 80%;
+      top: 15px;
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+    }
   }
 
   .navbar-nav > li > a {
@@ -52,6 +66,10 @@ header {
       display: block;
       opacity: 1;
       top: 20px;
+
+      @media screen and (max-width: 768px) {
+        top: 15px;
+      }
     }
 
     .navbar-nav > li > a {
@@ -70,6 +88,15 @@ header {
       font-size: 1.8rem;
       text-transform: uppercase;
       background-color: white;
+    }
+
+    .navbar-toggle {
+      border: none;
+
+      .icon-bar {
+        width: 30px;
+        background-color: black;
+      }
     }
   }
 
@@ -99,6 +126,10 @@ header {
     color: @dark-grey;
     padding-top: 5px;
   }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 25px;
+  }
 }
 
 .footer-logo img {
@@ -120,6 +151,10 @@ header {
   a:hover {
     font-size: 2.4rem;
     color: @bright;
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
   }
 }
 

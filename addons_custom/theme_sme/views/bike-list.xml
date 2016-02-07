@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+  <data noupdate="1">
+
+    <template id="website.bikes" name="Bikes" page="True">
+      <t t-call="website.layout">
+        <div id="wrap" class="oe_structure">
+
+          <section class="bike-grid section-no-b-padding">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 mb64">
+                  <h2 class="mb16">All Bikes</h2>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="grid-sizer" />
+                <div class="gutter-sizer" />
+                <div class="col-md-4 grid-item grid-item-height1 bike1 o_animate o_anim_fade_in">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item grid-item-width1 bike2 o_animate o_anim_fade_in o_anim_del500">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item grid-item-height1 bike3 o_animate o_anim_fade_in o_anim_del500">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item bike4 o_animate o_anim_fade_in o_anim_del1000">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item bike5 o_animate o_anim_fade_in o_anim_del500">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item bike6 o_animate o_anim_fade_in o_anim_del500">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="bike-grid section-no-padding">
+            <div class="container mb64">
+              <div class="grid">
+                <div class="grid-sizer" />
+                <div class="gutter-sizer" />
+                <div class="col-md-4 grid-item grid-item-height1 bike1">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item grid-item-width1 bike2">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item grid-item-height1 bike3">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item bike4">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item bike5">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4 grid-item bike6">
+                  <a class="grid-link" href="">
+                    <div class="grid-item-copy-box">
+                      <div class="grid-item-copy">
+                        <span>Fridolin</span>
+                        <span>| Der Elegante</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        </div>
+      </t>
+    </template>
+
+  </data>
+</openerp>

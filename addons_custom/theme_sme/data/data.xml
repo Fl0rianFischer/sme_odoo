@@ -8,5 +8,13 @@
       <field name="website_id" ref="website.default_website" />
       <field name="sequence" type="int">101</field>
     </record>
+
+    <record id="supernova_service" model="website.menu">
+      <field name="name">Bikes</field>
+      <field name="url">/page/website.bikes</field>
+      <field name="parent_id" ref="website.main_menu" />
+      <field name="website_id" ref="website.default_website" />
+      <field name="sequence" type="int">101</field>
+    </record>
   </data>
 </openerp>

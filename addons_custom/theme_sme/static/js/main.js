@@ -1,5 +1,5 @@
 $(window).load(function() {
-  $('header').height($('.navbar-static-top').outerHeight());
+  ($(window).width() > 768) ? $('header').height($('.navbar-static-top').outerHeight()) : '';
 });
 
 $(document).ready(function() {
@@ -37,7 +37,10 @@ $(document).ready(function() {
   calculateFullHeight($('.video-header'));
 
   $(window).resize(function() {
+    var $header = $('header');
+
     calculateFullHeight($('.video-header'));
+    ($(window).width() > 768) ? $header.height($('.navbar-static-top').outerHeight()) : $header.height('auto');
   })
 
   function scrollDown (el) {

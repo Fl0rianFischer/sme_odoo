@@ -37,13 +37,12 @@
         'views/contact.xml',
         'views/bike.xml',
         'data/data.xml',
-        'views/velosophie.xml'
+        'views/velosophie.xml',
+        'views/bike-list.xml'
     ],
 
     'depends': [
         'website',
-        's_media_block',
-        'website_animate',
         'website_crm',
         'website_form'
     ],
