@@ -2,23 +2,42 @@
 <openerp>
   <data>
 
-  <!-- Snippet's Body -->
-  <template name="Media Block" id="s_media_block">
-      <section class="s_media_block" header_type="video" mp4="http://media.sublimevideo.net/v/midnight-sun-short-edit-360p.mp4" webm="http://media.sublimevideo.net/v/midnight-sun-short-edit-360p.webm" muted="muted" loop="loop" controls="controls" autoplay="autoplay" iframefit="fitCont" style="height:600px">
-        <div class="v-align text-center">     
-          <h1 class="text-center">Media Box</h1>     
-        </div>        
+    <!-- Snippet's Body -->
+    <template name="Media Block" id="s_media_block">
+      <section  class="s_media_block video-header" 
+        header_type="video"  webm="/theme_sme/static/video/sme_image.webm" 
+        ogg="/theme_sme/static/video/sme_image.ogv" 
+        mp4="/theme_sme/static/video/sme_image.mp4" 
+        muted="muted" loop="loop" 
+        autoplay="autoplay" iframefit="fitCont" 
+        style="">    
+        <div class="video-header-overlay" />
+        <div class="container video-header-copy">
+          <div class="row">
+            <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 video-header-copy-box">
+              <h1 class="font-bright">Modern Bike Art</h1>
+              <h5 class="header-subtitle font-bright">„Bei keiner anderen Erfindung ist das Nützliche 
+                mit dem Angenehmen so innig verbunden, wie beim Fahrrad.“ <br /> –Adam Opel
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-box">
+          <a class="scroll-link">
+            <i class="fa fa-angle-down fa-3x" />
+          </a>
+        </div>   
       </section>
-  </template>
+    </template>
 
-  <!-- Snippet's Options -->
-  <template id="s_media_block_option" inherit_id="website.snippet_options">  
-    <xpath expr="//div[@data-js='blog-style']" position="before">
-      <div data-js='s_media_block' data-selector="section.s_media_block">
-        <li data-video_opt=""><a><i class="fa fa-fw fa-cog"></i>Media Type</a></li>
-      </div>
-    </xpath>
-  </template>
+    <!-- Snippet's Options -->
+    <template id="s_media_block_option" inherit_id="website.snippet_options">  
+      <xpath expr="//div[@data-js='blog-style']" position="before">
+        <div data-js='s_media_block' data-selector="section.s_media_block">
+          <li data-video_opt=""><a><i class="fa fa-fw fa-cog"></i>Media Type</a></li>
+        </div>
+      </xpath>
+    </template>
 
   </data>
 </openerp>

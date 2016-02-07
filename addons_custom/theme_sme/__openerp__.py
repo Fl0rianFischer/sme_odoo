@@ -44,6 +44,7 @@
     'depends': [
         'website',
         'website_crm',
-        'website_form'
+        'website_form',
+        's_media_block'
     ],
 }

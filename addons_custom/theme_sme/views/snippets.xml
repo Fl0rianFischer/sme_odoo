@@ -5,10 +5,10 @@
     <template id="sme-snippets" inherit_id="website.snippets" name="SME Snippets">
 
       <xpath expr="//div[@id='snippet_structure']//div[@class='o_panel_body']" position="inside">
-        <t t-snippet="theme_sme.product-gallery" t-thumbnail="/theme_supernova/static/src/img/thumbnails/thumbnail_slider.png"/>
-        <t t-snippet="theme_sme.contact-block" t-thumbnail="/theme_supernova/static/src/img/thumbnails/thumbnail_slider.png"/>
-        <t t-snippet="theme_sme.large-image-text" t-thumbnail="/theme_supernova/static/src/img/thumbnails/thumbnail_slider.png"/>
-        <t t-snippet="theme_sme.bike-details" t-thumbnail="/theme_supernova/static/src/img/thumbnails/thumbnail_slider.png"/>
+        <t t-snippet="theme_sme.product-gallery" t-thumbnail="/theme_sme/static/img/thumb/thumb_gallery.png"/>
+        <t t-snippet="theme_sme.large-image-text" t-thumbnail="/theme_sme/static/img/thumb/thumb_image_text.png"/>
+        <t t-snippet="theme_sme.bike-details" t-thumbnail="/theme_sme/static/img/thumb/thumb_details.png"/>
+        <t t-snippet="theme_sme.contact-box" t-thumbnail="/theme_sme/static/img/thumb/thumb_contact.png"/>
       </xpath>
 
       <xpath expr="//div[@id='snippet_content']//div[@class='o_panel_body']" position="inside">
@@ -126,219 +126,210 @@
       </section>
     </template>
 
-
-    <template id="contact-block">
-      <section class="section-lg">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center border border-dark">
-              <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                  <h2 class="mt32 mb16">Hallo Sagen</h2>
-                  <p class="mb32">Gerne nehme ich Ihre Anfrage für neue Aufträge, Reparaturen oder Modifikationen an</p>
-                  <a href="/page/contactus" class="btn btn-primary mb32">Hier entlang</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </template>
-
     <template id="large-image-text" name="Image Text LG">
 
-      <section class="large-image-text section-lg">
-        <div class="caption-background-overlay overlay-gradient-none" />
+      <section class="section-lg" style="background-image: url('/theme_sme/static/img/bike-red.jpg');
+        background-size: cover;
+        background-position: center;">
+        <div class="caption-background-overlay overlay-full" />
         <div class="container">
           <div class="row">
-            <div class="caption-copy col-md-5 col-md-offset-1">
-              <h2 class=" font-bright">Kraftvolles Leichtgewicht</h2>
-              <p class="font-bright">Durch ihr kompaktes Design und die Verwendung von extrem Leichtem Aluminium ist das Gewicht der E3 Pro 2 so gering, dass Radsportler jeder Couleur auf das System setzen. In Kombination mit 6V Dynamos ist die E3 Pro 2 das ideale System.</p>
-              <div class="sn_product__unit">
-                <h6>
-                  <span class="font-bright sn_product__unit--number">
-                    110
-                  </span>
-                  <span class="font-bright sn_product__unit--unit">
-                    g
-                  </span>
-                </h6>
-                <p class="sn_product__unit--description">
-                  Gewicht
-                </p>
+            <div class="caption-copy col-md-7 col-sm-7">
+              <h2 class=" font-bright">Personalized Design</h2>
+              <p class="font-bright">Der Bau ästhetischer Einzelstücke trägt zur verstärkten Identifizierung mit dem Produkt bei. Daher wird ein jedes Exemplar aus dem Hause Sme Bicycles namentlich personifiziert. Das zukünftige Velo soll demnach nicht nur als reines Fortbewegungsmittel betrachtet werden, sondern als eine Art Wegbegleiter für zahlreiche Abenteuer.</p>
+              <br /> 
+              <p class="font-bright">
+                Wesentlich ist daher die enge Zusammenarbeit mit dem Auftraggeber sowie der Einsatz moderner Software, um den Ansprüchen an Design, Ergonomie und Qualität konstruktiv gerecht zu werden. Resultierend wird jedes Veloin Handarbeit und viel Liebe zum Detail in Deutschland hergestellt.</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-    </template>
+      </template>
 
-    <template id="bike-details" name="Bike Details">
-      <section class="">
-        <div class="container border border-dark border-light border-top mb64">
-          <div class="row  mt128">
-            <div class="col-md-9 col-md-offset-1">
-              <h2 class="mb32">Technische Details</h2>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Rahmen</span>
+      <template id="bike-details" name="Bike Details">
+        <section class="">
+          <div class="container border border-dark border-light border-top mb64">
+            <div class="row  mt128">
+              <div class="col-md-9 col-md-offset-1">
+                <h2 class="mb32">Technische Details</h2>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Rahmen</span>
+                  </div>
+                  <div class="col-md-10">
+                    <span>Rennrad Geometrie (RH 56)  | vertikale Ausfallende |  Aeroshape AL 6061T6 | 3-Fach konifiziert</span>
+                  </div>
                 </div>
-                <div class="col-md-10">
-                  <span>Rennrad Geometrie (RH 56)  | vertikale Ausfallende |  Aeroshape AL 6061T6 | 3-Fach konifiziert</span>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Gabel</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Kinesis</span>
+                  </div>
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Steuersatz</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>VP Semi Integrated</span>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Gabel</span>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Kurbelsatz</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Campagnolo Veloce</span>
+                  </div>
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Innenlager</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Campagnolo Veloce Ultratorque</span>
+                  </div>
                 </div>
-                <div class="col-md-4">
-                  <span>Kinesis</span>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Antrieb</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Campagnolo Veloce | 50/42Z</span>
+                  </div>
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Schaltung</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Campagnolo Veloce 2/10-Fach</span>
+                  </div>
                 </div>
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Steuersatz</span>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Lenker/Vorbau</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Kalloy Ergo 6061T6</span>
+                  </div>
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Lenkergriffe</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Gyes Echtleder</span>
+                  </div>
                 </div>
-                <div class="col-md-4">
-                  <span>VP Semi Integrated</span>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Sattel/Stütze</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Gyes G5 Ultra | Kalloy Aero</span>
+                  </div>
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Pedale</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>VP R70</span>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Kurbelsatz</span>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Laufräder</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>H+Son Archertype  VR radial | HR 3-fach gekreuzt </span>
+                  </div>
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Nabensatz</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Miche Racing Box  VR 32L | HR 32L</span>
+                  </div>
                 </div>
-                <div class="col-md-4">
-                  <span>Campagnolo Veloce</span>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Bereifung</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Continental 4 Seasons 28-622 </span>
+                  </div>
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Bremsen</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Campagnolo Veloce</span>
+                  </div>
                 </div>
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Innenlager</span>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Highlights</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Hinterradaussparung</span>
+                  </div>
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Gewicht</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>7,6 kg</span>
+                  </div>
                 </div>
-                <div class="col-md-4">
-                  <span>Campagnolo Veloce Ultratorque</span>
-                </div>
-              </div>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Antrieb</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Campagnolo Veloce | 50/42Z</span>
-                </div>
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Schaltung</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Campagnolo Veloce 2/10-Fach</span>
-                </div>
-              </div>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Lenker/Vorbau</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Kalloy Ergo 6061T6</span>
-                </div>
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Lenkergriffe</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Gyes Echtleder</span>
-                </div>
-              </div>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Sattel/Stütze</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Gyes G5 Ultra | Kalloy Aero</span>
-                </div>
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Pedale</span>
-                </div>
-                <div class="col-md-4">
-                  <span>VP R70</span>
-                </div>
-              </div>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Laufräder</span>
-                </div>
-                <div class="col-md-4">
-                  <span>H+Son Archertype  VR radial | HR 3-fach gekreuzt </span>
-                </div>
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Nabensatz</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Miche Racing Box  VR 32L | HR 32L</span>
-                </div>
-              </div>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Bereifung</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Continental 4 Seasons 28-622 </span>
-                </div>
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Bremsen</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Campagnolo Veloce</span>
-                </div>
-              </div>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Highlights</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Hinterradaussparung</span>
-                </div>
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Gewicht</span>
-                </div>
-                <div class="col-md-4">
-                  <span>7,6 kg</span>
-                </div>
-              </div>
-              <div class="row mb8">
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Status</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Verkauft</span>
-                </div>
-                <div class="col-md-2 tech-label">
-                  <span class="font-bold">Kategorie</span>
-                </div>
-                <div class="col-md-4">
-                  <span>Neuafbau</span>
+                <div class="row mb8">
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Status</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Verkauft</span>
+                  </div>
+                  <div class="col-md-2 tech-label">
+                    <span class="font-bold">Kategorie</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span>Neuafbau</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </template>
+        </section>
+      </template>
 
-    <template id="caption-background-options" name="Caption Background Options" inherit_id="website.snippet_options">
-      <xpath expr="//div[@data-js='background']" position="after">
+      <template id="contact-box" name="Contact Box">
+        <section class="section-lg">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 text-center border border-dark">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                    <h2 class="mt32 mb16">Hallo Sagen</h2>
+                    <p class="mb32">Gerne nehme ich Ihre Anfrage für neue Aufträge, Reparaturen oder Modifikationen an</p>
+                    <a href="/page/contactus" class="btn btn-primary mb32">Hier entlang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </template>
 
-        <div data-selector=".caption-background-overlay">
-          <li class="dropdown-submenu">
-            <a tabindex="-1" href="#">Overlay</a>
-            <ul class="dropdown-menu">
-              <li data-select_class="overlay-full"><a>Full-Width</a></li>
-              <li data-select_class="overlay-gradient-left"><a>Gradient Links</a></li>
-              <li data-select_class="overlay-gradient-right"><a>Gradient Rechts</a></li>
-              <li data-select_class="overlay-gradient-top"><a>Gradient Top</a></li>
-              <li data-select_class="overlay-gradient-bottom"><a>Gradient Bottom</a></li>
-              <li data-select_class="overlay-gradient-none"><a>Kein</a></li>
-            </ul>
-          </li>
-        </div>
+      <template id="caption-background-options" name="Caption Background Options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='background']" position="after">
 
-      </xpath>
-    </template>
+          <div data-selector=".caption-background-overlay">
+            <li class="dropdown-submenu">
+              <a tabindex="-1" href="#">Overlay</a>
+              <ul class="dropdown-menu">
+                <li data-select_class="overlay-full"><a>Full-Width</a></li>
+                <li data-select_class="overlay-gradient-left"><a>Gradient Links</a></li>
+                <li data-select_class="overlay-gradient-right"><a>Gradient Rechts</a></li>
+                <li data-select_class="overlay-gradient-top"><a>Gradient Top</a></li>
+                <li data-select_class="overlay-gradient-bottom"><a>Gradient Bottom</a></li>
+                <li data-select_class="overlay-gradient-none"><a>Kein</a></li>
+              </ul>
+            </li>
+          </div>
 
-  </data>
-</openerp>
+        </xpath>
+      </template>
+
+    </data>
+  </openerp>
