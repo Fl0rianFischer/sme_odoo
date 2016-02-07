@@ -36,6 +36,25 @@
                       <li>
                         <t  t-if="user_id.partner_id.name != 'Public user'">
                           <a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+                          <ul class="list-inline js_language_selector mt16" t-if="(request and request.website_multilang and len(languages) &gt; 1) or (website and (editable or translatable))">
+                            <li t-foreach="languages" t-as="lg">
+                              <a
+                                t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])"
+                                t-att-data-default-lang="(editable or translatable) and 'true' if website and lg[0] == website.default_lang_code else None"
+                                t-att-data-lang="lg[0]"
+                                class="js_change_lang"
+                                >
+                                <t t-esc="lg[1].split('/').pop()"/>
+                              </a>
+                            </li>
+                            <li groups="base.group_website_publisher">
+                              <t t-set="url_return" t-value="url_for('', '[lang]') + '?' + keep_query()"/>
+                              <a t-attf-href="/web#action=base.action_view_base_language_install&amp;website_id=#{website.id if website else ''}&amp;url_return=#{url_return}">
+                                <i class="fa fa-plus-circle"/>
+                                Add a language...
+                              </a>
+                            </li>
+                          </ul>
                         </t>
                       </li>
                     </ul>
