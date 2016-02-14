@@ -173,7 +173,6 @@
                     </div>
                     <div class="col-md-9">
                       <div class="form-group text-right">
-
                         <span id="o_website_form_result"></span>
                         <button class="btn btn-primary btn-lg o_website_form_send">Senden</button>
                       </div>

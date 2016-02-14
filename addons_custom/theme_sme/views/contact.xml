@@ -83,47 +83,59 @@
     <template id="sn_contactus_form" name="Contact Form" inherit_id="website_crm.contactus_form" customize_show="True">
       <xpath expr="//form/.." position="replace">
         <div class="row mt64 mb64">
-          <form action="/website_form/" method="post" data-model_name="crm.lead" data-success_page="/page/website_crm.contactus_thanks" class="s_website_form form-horizontal container-fluid mt32" enctype="multipart/form-data">
+          <form action="/website_form/" method="post" data-model_name="crm.lead" class="s_website_form form-horizontal container-fluid mt32" enctype="multipart/form-data">
             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-            <div class="form-group form-field o_website_form_required_custom">
-              <label class="col-md-3 col-sm-4 control-label" for="contact_name">Your Name</label>
-              <div class="col-md-7 col-sm-8">
+            <div class="col-md-6 col-md-offset-3 mb24">
+              <div class="form-group form-name form-field o_website_form_required_custom">
                 <input type="text" class="form-control o_website_form_input" name="contact_name" required=""/>
+                <label class="control-label" for="contact_name">
+                  <span class="control-label-content">Ihr Name *</span>
+                </label>
               </div>
             </div>
-            <div class="form-group form-field">
-              <label class="col-md-3 col-sm-4 control-label" for="phone">Phone Number</label>
-              <div class="col-md-7 col-sm-8">
+            <div class="col-md-6 col-md-offset-3 mb24">
+              <div class="form-group form-field">
                 <input type="text" class="form-control o_website_form_input"  name="phone"/>
+                <label class="control-label" for="phone">
+                  <span class="control-label-content">Telefon</span>
+                </label>
               </div>
             </div>
-            <div class="form-group form-field o_website_form_required_custom">
-              <label class="col-md-3 col-sm-4 control-label" for="email_from">Email</label>
-              <div class="col-md-7 col-sm-8">
+            <div class="col-md-6 col-md-offset-3 mb24">
+              <div class="form-group form-field o_website_form_required_custom">
                 <input type="text" class="form-control o_website_form_input" name="email_from" required=""/>
+                <label class="control-label" for="email_from">
+                  <span class="control-label-content">Email *</span>
+                </label>
               </div>
             </div>
-            <div class="form-group form-field o_website_form_required_custom">
-              <label class="col-md-3 col-sm-4 control-label" for="partner_name">Your Company</label>
-              <div class="col-md-7 col-sm-8">
+            <div class="col-md-6 col-md-offset-3 mb24">
+              <div class="form-group form-field o_website_form_required_custom">
                 <input type="text" class="form-control o_website_form_input" name="partner_name" required=""/>
+                <label class="control-label" for="partner_name">
+                  <span class="control-label-content">Firma</span>
+                </label>
               </div>
             </div>
-            <div class="form-group form-field o_website_form_required">
-              <label class="col-md-3 col-sm-4 control-label" for="name">Subject</label>
-              <div class="col-md-7 col-sm-8">
+            <div class="col-md-6 col-md-offset-3 mb24">
+              <div class="form-group form-field o_website_form_required">
                 <input type="text" class="form-control o_website_form_input" name="name" required=""/>
+                <label class="control-label" for="name">
+                  <span class="control-label-content">Betreff *</span>
+                </label>
               </div>
             </div>
-            <div class="form-group form-field o_website_form_required_custom">
-              <label class="col-md-3 col-sm-4 control-label" for="description">Your Question</label>
-              <div class="col-md-7 col-sm-8">
+            <div class="col-md-6 col-md-offset-3 mb24">
+              <div class="form-group form-field o_website_form_required_custom">
                 <textarea class="form-control o_website_form_input" name="description" required=""></textarea>
+                <label class="control-label" for="description">
+                  <span class="control-label-content">Ihre Anfrage *</span>
+                </label>
               </div>
             </div>
             <div class="form-group">
               <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
-                <button class="btn btn-primary btn-lg o_website_form_send">Send</button>
+                <button class="btn btn-primary btn-lg o_website_form_send">Senden</button>
                 <span id="o_website_form_result"></span>
               </div>
             </div>
