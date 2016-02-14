@@ -4,6 +4,21 @@ $(window).load(function() {
 
 $(document).ready(function() {
 
+  var formInputChecker = function (event) {
+
+    if($(this).val() === "") {
+      $(this).parent().removeClass('input-filled');
+    } else {
+      $(this).parent().addClass('input-filled');
+    }
+  };
+
+  var inputForm = $('.form-field input, .form-field textarea');
+
+  inputForm.focus(formInputChecker);
+  inputForm.blur(formInputChecker);
+  inputForm.each(formInputChecker);
+
   $('.navbar-static-top').affix({
     offset: {
       top: 0

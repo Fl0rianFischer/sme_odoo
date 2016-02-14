@@ -113,6 +113,10 @@ ul {
   border-bottom: none;
 }
 
+.bg-grey {
+  background-color: @light-grey;
+}
+
 @light-grey: #f1f1f1;
 @dark-grey: #545454;
 @bright: white;
@@ -206,4 +210,76 @@ a.link-cta.font-bright {
 
 .item-center {
   margin: 0 auto;
+}
+
+.mb24 {
+  margin-bottom: 24px;
+}
+
+// Form fields
+// ===========
+
+.form-horizontal .form-group {
+  margin: 0;
+}
+
+.o_website_form_input {
+  position: relative;
+  display: block;
+  float: right;
+  height: 50px;
+  color: black;
+  border: 1px solid black;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    .border-dark;
+  }
+}
+
+.form-horizontal .control-label {
+  position: absolute;
+  padding: 10px 0 0 12px;
+  width: 100%;
+  text-align: left;
+  pointer-events: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  float: right;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.control-label-content {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-weight: normal;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.o_website_form_input:focus + .control-label .control-label-content,
+.input-filled .control-label-content {
+  font-size: 1.2rem;
+  padding-left: 0;
+  -webkit-transform: translate3d(0, -130%, 0);
+  -moz-transform: translate3d(0, -130%, 0);
+  -o-transform: translate3d(0, -130%, 0);
+  -ms-transform: translate3d(0, -130%, 0);
+  transform: translate3d(0, -130%, 0);
+}
+
+#wrap .o_website_form_required .control-label:after, 
+#wrap .o_website_form_required_custom .control-label:after {
+    content: '';
 }

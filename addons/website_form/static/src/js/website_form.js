@@ -112,6 +112,7 @@ odoo.define('website_form.animation', function (require) {
                 } else {
                     // Success, redirect or update status
                     var success_page = self.$target.attr('data-success_page');
+                    self.$target.find('.input-filled').removeClass('input-filled');
                     if(success_page) {
                         $(location).attr('href', success_page);
                     }
