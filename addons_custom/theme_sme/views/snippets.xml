@@ -9,6 +9,7 @@
         <t t-snippet="theme_sme.large-image-text" t-thumbnail="/theme_sme/static/img/thumb/thumb_image_text.png"/>
         <t t-snippet="theme_sme.bike-details" t-thumbnail="/theme_sme/static/img/thumb/thumb_details.png"/>
         <t t-snippet="theme_sme.contact-box" t-thumbnail="/theme_sme/static/img/thumb/thumb_contact.png"/>
+        <t t-snippet="theme_sme.sme_separator" t-thumbnail="/theme_sme/static/img/thumb/thumb_contact.png"/>
       </xpath>
 
       <xpath expr="//div[@id='snippet_content']//div[@class='o_panel_body']" position="inside">
@@ -311,6 +312,18 @@
         </section>
       </template>
 
+      <template id="sme_separator" name="SME Separator">
+        <section class="separator">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <hr />
+              </div>
+            </div>
+          </div>
+        </section>
+      </template>
+
       <template id="caption-background-options" name="Caption Background Options" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='background']" position="after">
 
@@ -327,7 +340,6 @@
               </ul>
             </li>
           </div>
-
         </xpath>
       </template>
 
