@@ -4,19 +4,23 @@
 
     <template id="website.contactus" name="Kontakt" page="True">
       <t t-call="website.layout">
-        <div id="wrap" class="oe_structure">
-          <section class="cover" style="background-image: url('/theme_sme/static/img/header_bg.png')">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-8">
-                  <div class="mt128">
-                    <h1 class="cover-heading font-bright mb32">Say Hello!</h1>
-                    <h4 class="font-bright">Leidenschaftlicher Fahrradbau</h4>
+        <div id="wrap">
+          <div class="oe_structure">
+            <section class="cover" style="background-image: url('/theme_sme/static/img/header_bg.png')">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="mt128">
+                      <h1 class="cover-heading font-bright mb32">Say Hello!</h1>
+                      <h4 class="font-bright">Leidenschaftlicher Fahrradbau</h4>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
+
+          <div class="oe_structure" />
 
           <section class="section contact-infos">
             <div class="container">
@@ -141,6 +145,7 @@
             </div>
           </form>
         </div>
+        <div class="oe_structure" />
       </xpath>
     </template>
 

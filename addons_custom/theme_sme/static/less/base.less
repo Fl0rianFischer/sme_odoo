@@ -229,12 +229,16 @@ a.link-cta.font-bright {
   float: right;
   height: 50px;
   color: black;
-  border: 1px solid black;
+  border: none;
+  border-bottom: 1px solid black;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 
   &:focus {
     outline: none;
     box-shadow: none;
-    .border-dark;
+    border: none;
+    border-bottom: 2px solid black;
   }
 }
 

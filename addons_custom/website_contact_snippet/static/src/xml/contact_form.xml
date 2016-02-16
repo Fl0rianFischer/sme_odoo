@@ -3,25 +3,47 @@
   <data>
 
     <template id="contactus_form" name="Contact Form">
-      <section class="website-form-snippet">
-        <div>
-          <form action="/website_form/" method="post" data-model_name="crm.lead" class="s_website_form form-horizontal container mt32" enctype="multipart/form-data">
-            <div class="row">
+      <section class="website-form-snippet bg-grey">
+        <div class="container text-center mb32 bg-grey">
+          <div class="row mt64">
+            <div class="col-md-6 col-md-offset-3">
+              <h2 class="mb16">Hallo Sagen</h2>
+              <p>Gerne nehme ich Ihre Anfrage für neue Aufträge, Reparaturen oder Modifikationen an</p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <form action="/website_form/" method="post" data-model_name="crm.lead" class="s_website_form form-horizontal container" enctype="multipart/form-data">
+            <div class="row mb64">
               <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-              <div class="form-group form-name form-field o_website_form_required_custom col-md-12">
-                <div class="row">
-                  <label class="col-md-3 col-sm-4 control-label" for="contact_name">Your Name</label>
-                  <div class="col-md-7 col-sm-8">
-                    <input type="text" class="form-control o_website_form_input" name="contact_name" required=""/>
-                  </div>
+              <div class="col-md-3 col-md-offset-3 mb24">
+                <div class="form-group form-name form-field o_website_form_required_custom">
+                  <input type="text" class="form-control o_website_form_input" name="contact_name" required=""/>
+                  <label class="control-label" for="contact_name">
+                    <span class="control-label-content">Ihr Name</span>
+                  </label>
                 </div>
               </div>
-              <div class="form-group form-email form-field o_website_form_required_custom col-md-12">
-                <div class="row">
-                  <label class="col-md-3 col-sm-4 control-label" for="email_from">Email</label>
-                  <div class="col-md-7 col-sm-8">
-                    <input type="text" class="form-control o_website_form_input" name="email_from" required=""/>
-                  </div>
+              <div class="col-md-3 mb24">
+                <div class="form-group form-email form-field o_website_form_required_custom">
+                  <input type="text" class="form-control o_website_form_input" name="email_from" required=""/>
+                  <label class="control-label" for="email_from">
+                    <span class="control-label-content">Email</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-offset-3 mb24">
+                <div class="form-group form-message form-field o_website_form_required_custom">
+                  <textarea class="form-control o_website_form_input" name="description" required=""></textarea>
+                  <label class="control-label" for="description">
+                    <span class="control-label-content">Ihre Anfrage</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="form-group text-right">
+                  <span id="o_website_form_result"></span>
+                  <button class="btn btn-primary btn-lg o_website_form_send">Senden</button>
                 </div>
               </div>
               <div class="form-group form-subject form-field o_website_form_required col-md-12 hidden">
@@ -29,14 +51,6 @@
                   <label class="col-md-3 col-sm-4 control-label" for="name">Subject</label>
                   <div class="col-md-7 col-sm-8">
                     <input type="text" class="form-control o_website_form_input" name="name" required="" value="Message from contact snippet"/>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group col-md-12">
-                <div class="row">
-                  <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
-                    <button class="btn btn-primary btn-lg o_website_form_send">Send</button>
-                    <span id="o_website_form_result"></span>
                   </div>
                 </div>
               </div>
