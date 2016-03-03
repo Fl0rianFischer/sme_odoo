@@ -3,14 +3,15 @@
 # * product
 # 
 # Translators:
+# Andrés Felipe Casas Palomino <afcasas@nubark.com>, 2016
 # Mateo Tibaquirá <nestormateo@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-29 10:26+0000\n"
-"PO-Revision-Date: 2015-11-14 03:54+0000\n"
-"Last-Translator: Mateo Tibaquirá <nestormateo@gmail.com>\n"
+"PO-Revision-Date: 2016-02-05 22:53+0000\n"
+"Last-Translator: Andrés Felipe Casas Palomino <afcasas@nubark.com>\n"
 "Language-Team: Spanish (Colombia) (http://www.transifex.com/odoo/odoo-9/language/es_CO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: product
 #: selection:product.pricelist.item,applied_on:0
 msgid " Product Category"
-msgstr ""
+msgstr "Categoría de Producto"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_product_variant_count
@@ -39,7 +40,7 @@ msgstr "%s %% de descuento"
 #: code:addons/product/pricelist.py:290
 #, python-format
 msgid "%s %% discount and %s surcharge"
-msgstr ""
+msgstr "%s %% de descuento  %s de recargo"
 
 #. module: product
 #: code:addons/product/product.py:710 code:addons/product/product.py:1134
@@ -97,13 +98,13 @@ msgid ""
 "                1TB hard drive\n"
 "                Intel Iris Pro graphics\n"
 "            "
-msgstr ""
+msgstr "2.7GHz quad-core Intel Core i5\nTurbo Boost up to 3.2GHz\n8GB (two 4GB) memory\n1TB Disco Duro\nIntel Iris Pro graphics"
 
 #. module: product
 #: model:product.product,name:product.product_product_52
 #: model:product.template,name:product.product_product_52_product_template
 msgid "30m RJ45 wire"
-msgstr ""
+msgstr "30m de cable RJ45"
 
 #. module: product
 #: model:product.attribute.value,name:product.product_attribute_value_2
@@ -129,20 +130,20 @@ msgstr "7.9‑inch (diagonal) LED-backlit, 128Gb\nDual-core A5 con adaptador gr�
 #: model:product.product,website_description:product.product_product_8
 #: model:product.template,website_description:product.product_product_8_product_template
 msgid "75 percent less reflection."
-msgstr ""
+msgstr "75 % Menos reflexión"
 
 #. module: product
 #: model:product.product,name:product.product_product_51
 #: model:product.template,name:product.product_product_51_product_template
 msgid "8-port Switch"
-msgstr ""
+msgstr "Switch de 8 puertos"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
 msgid ""
 "<span attrs=\"{'invisible':[('base', 'not in', ('list_price','standard_price'))]}\">Public Price  -  </span>\n"
 "                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Other Pricelist  -  </span>"
-msgstr ""
+msgstr "<span attrs=\"{'invisible':[('base', 'not in', ('list_price','standard_price'))]}\">Precio público - </span>\n<span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Otras Lista de precios </span>"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
@@ -152,7 +153,7 @@ msgstr "<span>kg</span>"
 #. module: product
 #: model:ir.ui.view,arch_db:product.report_pricelist
 msgid "<strong>Currency</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Moneda</strong>:<br/>"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.report_pricelist
@@ -162,12 +163,12 @@ msgstr "<strong>Descripción</strong>"
 #. module: product
 #: model:ir.ui.view,arch_db:product.report_pricelist
 msgid "<strong>Price List Name</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Nombre Lista de Precios</strong>:<br/>"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.report_pricelist
 msgid "<strong>Print date</strong>:<br/>"
-msgstr ""
+msgstr "<strong>Fecha de impresion</strong>:<br/>"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_only_form_view
@@ -175,13 +176,13 @@ msgid ""
 "<strong>Warning</strong>: adding or deleting attributes\n"
 "                            will delete and recreate existing variants and lead\n"
 "                            to the loss of their possible customizations."
-msgstr ""
+msgstr "<strong>Advertencia</strong>: adición o eliminación de atributos\n                            borrará y volver a crear variantes existentes y la pérdida de  sus posibles personalizaciones"
 
 #. module: product
 #: code:addons/product/product.py:977 sql_constraint:product.product:0
 #, python-format
 msgid "A barcode can only be assigned to one product !"
-msgstr ""
+msgstr "Un código de barras sólo se puede asignar a un solo producto! "
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_category_type
@@ -196,7 +197,7 @@ msgstr "Una categoría con tipo 'Vista' es una categoría que puede ser usada co
 msgid ""
 "A consumable is a product for which you don't manage stock, a service is a "
 "non-material product provided by a company or an individual."
-msgstr ""
+msgstr "Un consumible es un producto del que no se le realizan valores de invetario, un servicio es un producto no - material proporcionado por una empresa o un individuo ."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_description_sale
@@ -214,7 +215,7 @@ msgid ""
 "A description of the Product that you want to communicate to your vendors. "
 "This description will be copied to every Purchase Order, Receipt and Vendor "
 "Bill/Refund."
-msgstr ""
+msgstr "Una descripción del producto que desea comunicar a sus proveedores. Esta descripción se copiará en cada orden de compra, recepción y Vendor Bill / de reembolso."
 
 #. module: product
 #: model:product.product,website_description:product.product_product_9
@@ -277,7 +278,7 @@ msgstr "Todo"
 #: code:addons/product/pricelist.py:283
 #, python-format
 msgid "All Products"
-msgstr ""
+msgstr "Todos los Productos"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view
@@ -524,7 +525,7 @@ msgstr ""
 #. module: product
 #: model:ir.ui.view,arch_db:product.view_product_price_list
 msgid "Calculate Product Price per Unit Based on Pricelist Version."
-msgstr "Calcular el precio basado en unidades para una versión de LdP."
+msgstr "Calcular el Precio por Unidad basado en una Versión de LdP."
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_rental
@@ -682,6 +683,12 @@ msgid "Computers"
 msgstr "Computadores"
 
 #. module: product
+#: code:addons/product/product.py:460
+#, python-format
+msgid "Consumable"
+msgstr ""
+
+#. module: product
 #: model:ir.model.fields,help:product.field_product_uom_category_id
 msgid ""
 "Conversion between Units of Measure can only occur if they belong to the "
@@ -753,7 +760,7 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:product.field_product_uom_categ_create_date
 #: model:ir.model.fields,field_description:product.field_product_uom_create_date
 msgid "Created on"
-msgstr "Creado"
+msgstr "Creado el"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_8
@@ -969,7 +976,7 @@ msgstr ""
 #. module: product
 #: constraint:product.category:0
 msgid "Error ! You cannot create recursive categories."
-msgstr "Error! Usted no puede crear categorías recursivas."
+msgstr "Error! No puede crear categorías recursivas."
 
 #. module: product
 #: constraint:product.pricelist.item:0
@@ -981,7 +988,7 @@ msgstr ""
 msgid ""
 "Error! You cannot assign the Main Pricelist as Other Pricelist in PriceList "
 "Item!"
-msgstr "¡Error! ¡No puedes asignar la LdP principal como otra LdP en un elemento de LdP!"
+msgstr "Error! No puede asignar la LdP Principal como Otra LdP en un elemento PriceList!"
 
 #. module: product
 #: constraint:res.currency:0
@@ -1197,7 +1204,7 @@ msgstr "Indica el orden en que los elementos de la LdP serán comprobados. En la
 #. module: product
 #: model:ir.model.fields,help:product.field_product_category_sequence
 msgid "Gives the sequence order when displaying a list of product categories."
-msgstr ""
+msgstr "Indica el orden de secuencia cuando se muestra una lista de categorías de producto."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_sequence
@@ -1715,7 +1722,7 @@ msgstr "Mensajes"
 #: model:ir.model.fields,help:product.field_product_product_message_ids
 #: model:ir.model.fields,help:product.field_product_template_message_ids
 msgid "Messages and communication history"
-msgstr "Mensajes e historial de comunicación"
+msgstr "Historial de mensajes y de comunicación"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
@@ -1899,7 +1906,7 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_category_parent_id
 msgid "Parent Category"
-msgstr ""
+msgstr "Categoría Padre"
 
 #. module: product
 #: model:ir.model,name:product.model_res_partner
@@ -2137,7 +2144,7 @@ msgstr "Producto"
 #. module: product
 #: model:ir.model,name:product.model_product_attribute
 msgid "Product Attribute"
-msgstr ""
+msgstr "Atributo del Producto"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_price_value_id
@@ -2156,7 +2163,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:product.product_category_list_view
 #: model:ir.ui.view,arch_db:product.product_category_search_view
 msgid "Product Categories"
-msgstr ""
+msgstr "Categorías de Producto"
 
 #. module: product
 #: model:ir.model,name:product.model_product_category
@@ -2495,6 +2502,12 @@ msgid "Server"
 msgstr "Servidor"
 
 #. module: product
+#: code:addons/product/product.py:460
+#, python-format
+msgid "Service"
+msgstr ""
+
+#. module: product
 #: model:ir.ui.view,arch_db:product.product_template_search_view
 #: model:product.category,name:product.product_category_3
 #: model:product.public.category,name:product.services
@@ -2712,7 +2725,7 @@ msgstr ""
 msgid ""
 "The computed price is expressed in the default Unit of Measure of the "
 "product."
-msgstr ""
+msgstr "El precio calculado es expresado en la Unidad de Medida predeterminada del producto."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_uom_rounding
@@ -2774,7 +2787,7 @@ msgstr ""
 msgid ""
 "The operation cannot be completed:\n"
 "You are trying to delete an attribute value with a reference on a product variant."
-msgstr ""
+msgstr "La operación no puede ser completada:\nEstá tratando de borrar un valor de atributo con una refeencia en una variante de producto."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo_price
@@ -2979,7 +2992,7 @@ msgstr ""
 #: model:product.product,website_description:product.product_product_6
 #: model:product.template,website_description:product.product_product_6_product_template
 msgid "Ultrafast wireless."
-msgstr ""
+msgstr "Inalámbrico ultrarrápido."
 
 #. module: product
 #: model:product.product,website_description:product.product_product_8
@@ -3003,7 +3016,7 @@ msgstr "Unidad de Medida"
 #: model:ir.actions.act_window,name:product.product_uom_categ_form_action
 #: model:ir.ui.menu,name:product.menu_product_uom_categ_form_action
 msgid "Unit of Measure Categories"
-msgstr ""
+msgstr "Categorías de Unidades de Medida"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_uom_category_id

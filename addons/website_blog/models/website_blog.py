@@ -9,6 +9,7 @@ from openerp import SUPERUSER_ID
 from openerp.addons.website.models.website import slug
 from openerp.osv import osv, fields
 from openerp.tools.translate import _
+from openerp.tools.translate import html_translate
 
 
 class Blog(osv.Model):
@@ -92,8 +93,8 @@ class BlogPost(osv.Model):
                     </div> '''
 
     _columns = {
-        'name': fields.char('Title', required=True, translate=True),
-        'subtitle': fields.char('Sub Title', translate=True),
+        'name': fields.html('Title', required=True, translate=html_translate, sanitize=False),
+        'subtitle': fields.html('Sub Title', translate=html_translate, sanitize=False),
         'author_id': fields.many2one('res.partner', 'Author'),
         'cover_properties': fields.text('Cover Properties'),
         'blog_id': fields.many2one(
@@ -103,7 +104,7 @@ class BlogPost(osv.Model):
         'tag_ids': fields.many2many(
             'blog.tag', string='Tags',
         ),
-        'content': fields.html('Content', translate=True, sanitize=False),
+        'content': fields.html('Content', translate=html_translate, sanitize=False),
         'website_message_ids': fields.one2many(
             'mail.message', 'res_id',
             domain=lambda self: [
@@ -288,7 +289,7 @@ class Website(osv.Model):
             dep[page_key] = []
         for p in post_obj.browse(cr, uid, posts, context=context):
             dep[page_key].append({
-                'text': _('Blog Post <b>%s</b> seems to have a link to this page !' % p.name),
+                'text': _('Blog Post <b>%s</b> seems to have a link to this page !') % p.name,
                 'link': p.website_url
             })
 

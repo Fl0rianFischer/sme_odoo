@@ -3,14 +3,16 @@
 # * account
 # 
 # Translators:
+# Denis Ledoux <dle@odoo.com>, 2016
 # Mateo Tibaquirá <nestormateo@gmail.com>, 2015
+# Thomas Groutars, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-18 08:05+0000\n"
-"PO-Revision-Date: 2015-11-20 01:21+0000\n"
-"Last-Translator: Mateo Tibaquirá <nestormateo@gmail.com>\n"
+"POT-Creation-Date: 2015-12-17 14:09+0000\n"
+"PO-Revision-Date: 2016-01-14 13:03+0000\n"
+"Last-Translator: Denis Ledoux <dle@odoo.com>\n"
 "Language-Team: Spanish (Colombia) (http://www.transifex.com/odoo/odoo-9/language/es_CO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +24,7 @@ msgstr ""
 #: model:mail.template,body_html:account.email_template_edi_invoice
 msgid ""
 "\n"
-"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
 "    <p>Hello ${object.partner_id.name},</p>\n"
 "    <p>A new invoice is available for you: </p>\n"
 "    \n"
@@ -282,7 +284,7 @@ msgid ""
 "<span class=\"panel-title\">\n"
 "                                        <strong>Invoice payment by Wire Transfer</strong>\n"
 "                                    </span>"
-msgstr ""
+msgstr "<span class=\"panel-title\">\n                                        <strong>Pago de factura con Transferencia Bancaria</strong>\n                                    </span>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -494,7 +496,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "<strong>Description:</strong>"
-msgstr "<strong>Descripci&oacute;n:</strong>"
+msgstr "<strong>Descripción:</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_trialbalance
@@ -519,12 +521,12 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "<strong>Fiscal Position Remark:</strong>"
-msgstr "<strong>Nota de Posici&oacute; Fiscal:</strong>"
+msgstr "<strong>Nota de Posición Fiscal:</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "<strong>Invoice Date:</strong>"
-msgstr ""
+msgstr "<strong>Fecha de Facturación:</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_generalledger
@@ -565,7 +567,7 @@ msgstr "<strong>Del Asociado:</strong>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_agedpartnerbalance
 msgid "<strong>Period Length (days)</strong>"
-msgstr "<strong>Longitud del Periodo (d&iacute;as)</strong>"
+msgstr "<strong>Longitud del Periodo (días)</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -873,7 +875,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_account_template_currency_id
 #: model:ir.model.fields,field_description:account.field_account_bank_accounts_wizard_currency_id
 msgid "Account Currency"
-msgstr "Cuenta de la Moneda"
+msgstr "Moneda de la Cuenta"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_account_template_account_dest_id
@@ -1419,7 +1421,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_config_settings_group_multi_currency
 msgid "Allows you multi currency environment"
-msgstr ""
+msgstr "Permitir un entorno multi moneda"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_config_settings_group_proforma_invoices
@@ -1448,6 +1450,7 @@ msgstr "Le permite usar la contabilidad analítica."
 #: model:ir.model.fields,field_description:account.field_account_tax_template_amount
 #: model:ir.model.fields,field_description:account.field_cash_box_in_amount
 #: model:ir.model.fields,field_description:account.field_cash_box_out_amount
+#: model:ir.ui.view,arch_db:account.report_invoice_document
 #: model:ir.ui.view,arch_db:account.view_move_line_form
 #, python-format
 msgid "Amount"
@@ -1475,12 +1478,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line_amount_currency
 #: model:ir.model.fields,field_description:account.field_account_move_line_amount_currency
 msgid "Amount currency"
-msgstr ""
+msgstr "Moneda del monto"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_partial_reconcile_amount_currency
 msgid "Amount in Currency"
-msgstr ""
+msgstr "Monto en la Moneda"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_operation_template_amount_type
@@ -1533,7 +1536,7 @@ msgstr ""
 #: code:addons/account/static/src/js/account_reconciliation_widgets.js:156
 #, python-format
 msgid "Analytic Acc."
-msgstr ""
+msgstr "Cue. Analítica"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_line_account_analytic_id
@@ -1698,7 +1701,7 @@ msgstr "Elementos conciliados automáticamente"
 #: model:ir.model.fields,field_description:account.field_account_invoice_report_price_average
 #: model:ir.model.fields,field_description:account.field_account_invoice_report_user_currency_price_average
 msgid "Average Price"
-msgstr ""
+msgstr "Precio Promedio"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
@@ -1783,7 +1786,7 @@ msgstr "Cuentas Bancarias"
 #: model:ir.model.fields,field_description:account.field_account_config_settings_bank_account_code_prefix
 #: model:ir.model.fields,field_description:account.field_wizard_multi_charts_accounts_bank_account_code_prefix
 msgid "Bank Accounts Prefix"
-msgstr ""
+msgstr "Prefijo de Cuentas Bancarias"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_bank_statements_source
@@ -1920,7 +1923,7 @@ msgstr ""
 #. module: account
 #: model:res.groups,name:account.group_account_invoice
 msgid "Billing"
-msgstr ""
+msgstr "Facturación"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
@@ -2193,18 +2196,8 @@ msgid "Cashbox Lines"
 msgstr ""
 
 #. module: account
-#: model:ir.model.fields,field_description:account.field_account_bank_statement_cashbox_end_id
-msgid "Cashbox end id"
-msgstr ""
-
-#. module: account
 #: model:ir.model.fields,field_description:account.field_account_cashbox_line_cashbox_id
-msgid "Cashbox id"
-msgstr ""
-
-#. module: account
-#: model:ir.model.fields,field_description:account.field_account_bank_statement_cashbox_start_id
-msgid "Cashbox start id"
+msgid "Cashbox"
 msgstr ""
 
 #. module: account
@@ -2915,7 +2908,9 @@ msgstr ""
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_abstract_payment_currency_id
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_currency_id
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line_currency_id
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line_journal_currency_id
 #: model:ir.model.fields,field_description:account.field_account_chart_template_currency_id
 #: model:ir.model.fields,field_description:account.field_account_invoice_company_currency_id
 #: model:ir.model.fields,field_description:account.field_account_invoice_currency_id
@@ -2924,6 +2919,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_invoice_report_currency_id
 #: model:ir.model.fields,field_description:account.field_account_invoice_tax_currency_id
 #: model:ir.model.fields,field_description:account.field_account_journal_currency_id
+#: model:ir.model.fields,field_description:account.field_account_move_currency_id
 #: model:ir.model.fields,field_description:account.field_account_move_line_company_currency_id
 #: model:ir.model.fields,field_description:account.field_account_move_line_currency_id
 #: model:ir.model.fields,field_description:account.field_account_partial_reconcile_company_currency_id
@@ -2931,6 +2927,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_partial_reconcile_currency_id
 #: model:ir.model.fields,field_description:account.field_account_payment_currency_id
 #: model:ir.model.fields,field_description:account.field_account_register_payments_currency_id
+#: model:ir.model.fields,field_description:account.field_res_partner_currency_id
 #: model:ir.model.fields,field_description:account.field_wizard_multi_charts_accounts_currency_id
 #: model:ir.ui.view,arch_db:account.report_generalledger
 #: model:ir.ui.view,arch_db:account.view_account_payment_search
@@ -2941,27 +2938,19 @@ msgstr "Moneda"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_report_currency_rate
 msgid "Currency Rate"
-msgstr "Tasa Monetaria"
+msgstr "Tasa de Cambio"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_wizard_multi_charts_accounts_currency_id
 msgid "Currency as per company's country."
-msgstr ""
+msgstr "Moneda según el país de la empresa."
 
 #. module: account
-#: code:addons/account/models/account_move.py:1168
-#: code:addons/account/models/account_move.py:1176
+#: code:addons/account/models/account_move.py:1180
+#: code:addons/account/models/account_move.py:1188
 #, python-format
 msgid "Currency exchange rate difference"
-msgstr ""
-
-#. module: account
-#: model:ir.model.fields,field_description:account.field_account_bank_statement_currency_id
-#: model:ir.model.fields,field_description:account.field_account_bank_statement_line_journal_currency_id
-#: model:ir.model.fields,field_description:account.field_account_move_currency_id
-#: model:ir.model.fields,field_description:account.field_res_partner_currency_id
-msgid "Currency id"
-msgstr "Id moneda"
+msgstr "Diferencia de cambio de moneda"
 
 #. module: account
 #: model:account.account.type,name:account.data_account_type_current_assets
@@ -3177,7 +3166,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_currency_id
 msgid "Default company currency"
-msgstr ""
+msgstr "Moneda por defecto de la compañía"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_purchase_tax_id
@@ -3578,6 +3567,11 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_balance_end_real
 msgid "Ending Balance"
+msgstr ""
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_cashbox_end_id
+msgid "Ending Cashbox"
 msgstr ""
 
 #. module: account
@@ -5339,7 +5333,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Main Currency"
-msgstr ""
+msgstr "Moneda Principal"
 
 #. module: account
 #: selection:account.financial.report,style_overwrite:0
@@ -5349,7 +5343,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_config_settings_currency_id
 msgid "Main currency of the company."
-msgstr ""
+msgstr "Moneda principal de la compañía."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -5458,12 +5452,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_invoice_message_ids
 msgid "Messages"
 msgstr "Mensajes"
-
-#. module: account
-#: model:ir.model.fields,help:account.field_account_bank_statement_message_ids
-#: model:ir.model.fields,help:account.field_account_invoice_message_ids
-msgid "Messages and communication history"
-msgstr ""
 
 #. module: account
 #: selection:account.journal,type:0
@@ -6329,7 +6317,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line_payment_id
 msgid "Payment that created this entry"
-msgstr ""
+msgstr "Pago que creó esta entrada"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_payment_method_payment_type
@@ -6557,7 +6545,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_chart_template_bank_account_code_prefix
 #: model:ir.model.fields,field_description:account.field_res_company_bank_account_code_prefix
 msgid "Prefix of the bank accounts"
-msgstr ""
+msgstr "Prefijo de las cuentas bancarias"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_company_cash_account_code_prefix
@@ -7473,6 +7461,11 @@ msgid "Starting Balance"
 msgstr ""
 
 #. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_cashbox_start_id
+msgid "Starting Cashbox"
+msgstr ""
+
+#. module: account
 #: model:ir.ui.view,arch_db:account.view_account_payment_search
 msgid "State"
 msgstr "Estado"
@@ -7588,6 +7581,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_invoice_tax_tax_id
 #: model:ir.model.fields,field_description:account.field_account_operation_template_second_tax_id
 #: model:ir.model.fields,field_description:account.field_account_operation_template_tax_id
+#: model:ir.ui.view,arch_db:account.report_invoice_document
 #: model:ir.ui.view,arch_db:account.view_account_tax_search
 #, python-format
 msgid "Tax"
@@ -7991,7 +7985,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_currency_id
 msgid "The currency used to enter statement"
-msgstr ""
+msgstr "La moneda utilizada para ingresar el extracto"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_invoice_tree1
@@ -8674,7 +8668,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_invoice_line_price_unit
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "Unit Price"
-msgstr "Precio Unidad"
+msgstr "Precio Unitario"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_analytic_line_product_uom_id
@@ -8857,7 +8851,7 @@ msgstr ""
 #: model:ir.model.fields,help:account.field_account_partial_reconcile_company_currency_id
 #: model:ir.model.fields,help:account.field_res_partner_currency_id
 msgid "Utility field to express amount currency"
-msgstr ""
+msgstr "Campo utilitario para expresar el monto monetario"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_vat_required
@@ -9145,7 +9139,7 @@ msgstr ""
 #: code:addons/account/models/account_payment.py:297
 #, python-format
 msgid "You can not delete a payment that is already posted"
-msgstr "Usted no puede borrar un pago que ya está contabilizado"
+msgstr "No puede borrar un pago que ya está contabilizado"
 
 #. module: account
 #: code:addons/account/models/account_payment.py:122
@@ -9381,7 +9375,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Your Bank Accounts"
-msgstr ""
+msgstr "Sus Cuentas Bancarias"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -9617,7 +9611,7 @@ msgstr "fijar logo de la compañía"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "setup your bank accounts."
-msgstr ""
+msgstr "configure sus cuentas bancarias."
 
 #. module: account
 #. openerp-web
@@ -9634,6 +9628,11 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_partner_property_form
 msgid "the parent company"
+msgstr ""
+
+#. module: account
+#: model:ir.ui.view,arch_db:account.account_planner
+msgid "the product list"
 msgstr ""
 
 #. module: account

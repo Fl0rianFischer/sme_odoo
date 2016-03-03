@@ -297,7 +297,7 @@ class Slide(models.Model):
     def _get_embed_code(self):
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         for record in self:
-            if record.datas and not record.document_id:
+            if record.datas and (not record.document_id or record.slide_type in ['document', 'presentation']):
                 record.embed_code = '<iframe src="%s/slides/embed/%s?page=1" allowFullScreen="true" height="%s" width="%s" frameborder="0"></iframe>' % (base_url, record.id, 315, 420)
             elif record.slide_type == 'video' and record.document_id:
                 if not record.mime_type:
@@ -459,7 +459,10 @@ class Slide(models.Model):
             return fetch_res
 
         values = {'slide_type': 'video', 'document_id': document_id}
-        youtube_values = fetch_res['values'].get('items', list(dict()))[0]
+        items = fetch_res['values'].get('items')
+        if not items:
+            return {'error': _('Please enter valid Youtube or Google Doc URL')}
+        youtube_values = items[0]
         if youtube_values.get('snippet'):
             snippet = youtube_values['snippet']
             if only_preview_fields:
