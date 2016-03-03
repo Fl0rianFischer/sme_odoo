@@ -37,6 +37,7 @@
         'views/contact.xml',
         'views/bike.xml',
         'data/data.xml',
+        'data/action.xml',
         'views/velosophie.xml',
         'views/bike-list.xml'
     ],

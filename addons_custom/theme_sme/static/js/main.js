@@ -59,7 +59,7 @@ $(document).ready(function() {
   })
 
   function scrollDown (el) {
-    $nextEl = el.closest('section').next('section');
+    $nextEl = $('section.intro');
 
     $('html, body').animate({
       scrollTop: $nextEl.offset().top - $('header').height() + 40

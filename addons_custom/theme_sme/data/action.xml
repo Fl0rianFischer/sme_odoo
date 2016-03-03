@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data noupdate="1">
+    <record id="supernova_service" model="website.menu">
+      <field name="name">Velosophie</field>
+      <field name="url">/page/website.velosophie</field>
+      <field name="parent_id" ref="website.main_menu" />
+      <field name="website_id" ref="website.default_website" />
+      <field name="sequence" type="int">101</field>
+    </record>
+
+    <record id="supernova_service" model="website.menu">
+      <field name="name">Bikes</field>
+      <field name="url">/page/website.bikes</field>
+      <field name="parent_id" ref="website.main_menu" />
+      <field name="website_id" ref="website.default_website" />
+      <field name="sequence" type="int">101</field>
+    </record>
+    
+    <record id="email_template_lead_notification" model="mail.template">
+      <field name="name">New Lead Notification</field>
+      <field name="model_id" ref="crm.model_crm_lead"/>
+      <field name="auto_delete" eval="True"/>
+      <field name="email_from">admin@sme-bicycles.com</field>
+      <field name="email_to">admin@sme-bicycles.com</field>
+      <field name="subject">Neue Kontaktanfrage von ${object.partner_id != False and object.partner_id.name or object.contact_name}</field>
+      <field name="body_html"><![CDATA[<p>Sie haben eine neue Kontaktanfrage über Ihr Odoo Kontaktformular erhalten</p>
+      <ul>
+        % if object.contact_name:
+        <li>Name: ${object.contact_name}</li>
+        % endif
+        % if object.phone:
+        <li>Phone: ${object.phone}</li>
+        % endif
+        % if object.email_from
+        <li>Email: ${object.email_from}</li>
+        % endif
+        $if object.partner_name
+        <li>Firma: ${object.partner_name}</li>
+        % endif
+        % if object.name
+        <li>Betreff: ${object.name}</li>
+        % endif
+        % if object.description
+        <li>Nachricht: ${object.description}</li>
+        % endif
+      </ul>]]></field>
+    </record>
+    <record id="lead_creation_notification" model="ir.actions.server">
+      <field name="name">Reminder to User</field>
+      <field name="model_id" ref="crm.model_crm_lead"/>
+      <field name="condition">True</field>
+      <field name="type">ir.actions.server</field>
+      <field name="state">email</field>
+      <field name="template_id" ref="email_template_lead_notification"/>
+    </record>
+    <record id="rule_notify_at_lead_creation" model="base.action.rule">
+      <field name="name">Notify on Lead Creation</field>
+      <field name="model_id" ref="crm.model_crm_lead"/>
+      <field name="sequence">0</field>
+      <field name="kind">on_create</field>
+      <field name="server_action_ids" eval="[(6,0,[ref('lead_creation_notification')])]"/>
+    </record>    
+
+  </data>
+</openerp>
